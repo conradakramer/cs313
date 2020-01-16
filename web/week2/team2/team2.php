@@ -10,12 +10,13 @@
     </head>
     <body>
         <?php for ($i=0; $i < 11; $i++) { 
-          echo '<div';
+          $s += '<div';
           if($i % 2 == 0){
-            echo ' class=even';
+            $s += ' class="even"';
           }
-          echo '>This is div #' + $i + '</div>';
+          $s += '>This is div #' + $i + '</div>';
         } ?>
+        <?php echo $s; ?>
         <script src="" async defer></script>
     </body>
 </html>
@@ -25,10 +26,15 @@
 <!-- Generate 10 divs with a Loop -->
 <!-- Even Number make different font color (add a class the even numbered divs) -->
 <!-- For Loop -->
-<?php
-    for ($x = 0; $x <= 10; $x++) {
-        echo "The number is: $x <br>";
-    }
-?>
 
 
+<!-- loop -->
+<?php for ($i = 0; $i < 10; $i++) { ?>
+
+	<div id=“<?php echo $i; ?>” class=“numberedDivs”
+
+		<?php if($i % 2 == 0){echo “style=‘color:red’”; } ?>
+
+		This is div #<?php echo $i; ?></div>
+
+<?php> } <?>
