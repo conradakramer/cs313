@@ -6,12 +6,12 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="team2.css">
     </head>
     <body>
         <?php for ($i=0; $i < 11; $i++) { 
           echo '<div';
-          if($i/2){
+          if($i % 2 == 0){
             echo ' class=even';
           }
           echo '>This is div #' + $i + '</div>';
