@@ -14,7 +14,7 @@
         <ul>
           <li><a href="week1/hello.html">week1 - Hello World </a></li>
           <li><a href="week2/assignment/about.html">week2 - Home Page </a></li>
-          <li><a href="week2/team2/team2.html">week2 - team assignment2 </a></li>
+          <li><a href="week2/team2/team2.php">week2 - team assignment2 </a></li>
         </ul>
     </div>
     <script src="" async defer></script>
