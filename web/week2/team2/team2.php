@@ -11,14 +11,14 @@
     <body>
     <?php session_start(); ?>
     <h1>PHP Team Activity</h1>
-    <!-- loop -->
-    <?php for ($i = 0; $i < 10; $i++) { ?>
-
-        <div id="<?php echo $i; ?>" class="numberedDivs" <?php if($i % 2 == 0){echo "style=‘color:red’";} ?>>
-
-            This is div #<?php echo $i; ?></div>
-
-         <?php } ?>
+    <?php for ($i = 0; $i < 10; $i++) {
+    $s .= '<div';
+    if ($i % 2 == 0) {
+      $s .= ' style="color:red"';
+    }
+    $s .= '>This is div #' . $i . '</div>';
+  } ?>
+  <?php echo $s; ?>
         <script src="" async defer></script>
     </body>
 </html>
