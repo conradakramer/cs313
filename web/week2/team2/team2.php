@@ -12,7 +12,7 @@
         <?php for ($i=0; $i < 11; $i++) { 
           echo '<div';
           if($i/2){
-            echo 'class=even';
+            echo ' class=even';
           }
           echo '>This is div #' + $i + '</div>';
         } ?>
@@ -32,15 +32,3 @@
 ?>
 
 
-<!-- Foreach -->
-<?php   
-     foreach($ as $)
-          {
-             ?>
-                  <div class="">
-                       <img src="<?php echo $file ?>">
-                       <p>Dylan Miller</p>
-                  </div>
-              <?php
-          }
-?>    
