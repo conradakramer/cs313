@@ -24,7 +24,3 @@
 </html>
 
 
-
-<!-- Generate 10 divs with a Loop -->
-<!-- Even Number make different font color (add a class the even numbered divs) -->
-<!-- For Loop -->
