@@ -21,7 +21,6 @@
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        <img src="assets/monitor.png" alt="monitor" width="250" height="250">
         <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='assignments.php'">Week 02 - About Me</button>
       </div>
     </div>
