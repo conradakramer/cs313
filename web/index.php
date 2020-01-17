@@ -8,26 +8,29 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Conrad Kramer</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!--<h1>Hello, world!</h1>-->
 
 
     <div class="container">
   <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
+        <img src="assets/man.png" alt="man">
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">About Me</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
+        <img src="assets/monitor.png" alt="monitor">
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Assignments</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
+        <img src="assets/repair.png" alt="repair">
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Comming Soon</button>
       </div>
     </div>
