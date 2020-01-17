@@ -8,34 +8,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Conrad Kramer</title>
+    <title>Assignments</title>
   </head>
   <body>
     <!--<h1>Hello, world!</h1>-->
 
 
-    <div class="container">
-  <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        <img src="assets/man.png" alt="man" width="250"height="250">
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='assignments.php'">About Me</button>
+        <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='assignments.php'">Week 01 - Hello World</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
         <img src="assets/monitor.png" alt="monitor" width="250" height="250">
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Assignments</button>
+        <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='assignments.php'">Week 02 - About Me</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-body">
-        <img src="assets/repair.png" alt="repair" width="250" height="250">
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Comming Soon</button>
-      </div>
-    </div>
-  </div>
-</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
