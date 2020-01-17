@@ -15,7 +15,19 @@
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
         
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">About Me</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Assignments</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Comming Soon</button>
       </div>
     </div>
     <!-- Optional JavaScript -->
