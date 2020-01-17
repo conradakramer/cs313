@@ -12,24 +12,28 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+
+
+    <div class="container">
+  <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">About Me</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Assignments</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Comming Soon</button>
       </div>
     </div>
+  </div>
+</div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
