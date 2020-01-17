@@ -19,13 +19,13 @@
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
         <img src="assets/man.png" alt="man" width="250"height="250">
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='assignments.php'">About Me</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="location.href='week2/assignment/assign02.html'">About Me</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
         <img src="assets/monitor.png" alt="monitor" width="250" height="250">
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Assignments</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary"onclick="location.href='assignments.php'">Assignments</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
