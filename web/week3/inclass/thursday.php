@@ -17,11 +17,11 @@
          // if cookie exists, echo it, otherwise echo that it doesn't have a value
          if(!isset($_COOKIE[$cookie_name])){
             echo "Cookie named $cookie_name has not been set";
-         }
-         else{
+         }else{
             echo "Cookie named $cookie_name is set<br>";
             echo "Value is " . $_COOKIE[$cookie_name];
          };
+         print_r($_COOKIE);
       ?>
       <h3>To print all cookies:</h3>
       <?php // print all cookies ?>
