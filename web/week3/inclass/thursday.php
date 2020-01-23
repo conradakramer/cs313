@@ -21,7 +21,7 @@
          else{
             echo "Cookie named $cookie_name is set<br>";
             echo "Value is " . $_COOKIE[$cookie_name];
-         }
+         };
       ?>
       <h3>To print all cookies:</h3>
       <?php // print all cookies ?>
