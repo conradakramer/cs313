@@ -15,6 +15,7 @@
   }
   .card{
       width:300px;
+      padding: 30px;
   }
   </style>
 </head>
