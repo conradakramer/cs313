@@ -17,8 +17,9 @@
       width:350px;
       margin: 10px;
   }
-  .container{
-      
+  .row{
+      text-align:center;
+      justify-content:center;
   }
   </style>
 </head>
@@ -46,7 +47,7 @@
 <div class="container" style="margin-top:30px">
   <div class="row">
   <div class="card">
-    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -54,7 +55,7 @@
   </div>
 </div>
 <div class="card" >
-    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -62,7 +63,7 @@
   </div>
 </div>
 <div class="card">
-    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
