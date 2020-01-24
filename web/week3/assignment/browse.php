@@ -14,8 +14,12 @@
     background: #aaa;
   }
   .card{
-      width:300px;
+      min-width:300px;
+      max-width:400px;
       margin: 30px;
+  }
+  .container{
+      
   }
   </style>
 </head>
