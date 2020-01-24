@@ -26,7 +26,7 @@
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week3/assignment/brouse.php'">Week 03 - About Me</button>
+        <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week3/assignment/browse.php'">Week 03 - Shoping</button>
       </div>
     </div>
 
