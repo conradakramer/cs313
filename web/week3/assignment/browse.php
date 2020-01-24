@@ -31,7 +31,7 @@
 <?php
          // remove previous session variable
          // Set session variables
-         $_SESSION["favcolor"] = "green";
+         $_SESSION["Items"] = {[1,200,"hotdog"],[1,300,"taco"]};
          $_SESSION["favanimal"] = "dolphin";
          // echo that variables have been set
          echo "Session variables have been set.";
@@ -65,7 +65,7 @@
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item1">Add to Cart</a>$200
+      <a href="#" class="btn btn-primary"id="item1"value=200>$200</a>
   </div>
 </div>
 <div class="card" id="card2">
@@ -73,7 +73,7 @@
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item2">Add to Cart</a>$300
+      <a href="#" class="btn btn-primary"id="item2" value=300>$300</a>
   </div>
 </div>
 <div class="card" id="card3">
@@ -81,7 +81,7 @@
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item3">Add to Cart</a>$400
+      <a href="#" class="btn btn-primary"id="item3" value=400>$400</a>
   </div>
 </div>
 <div class="card" id="card4">
@@ -89,7 +89,7 @@
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item4">Add to Cart</a>$500
+      <a href="#" class="btn btn-primary"id="item4" value=500>$500</a>
   </div>
 </div>
 <div class="card" id="card5">
@@ -97,7 +97,7 @@
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item5">Add to Cart</a>$600
+      <a href="#" class="btn btn-primary"id="item5" value=600>$600</a>
   </div>
 </div>
 <div class="card" id="card6">
@@ -105,7 +105,7 @@
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary" id="item6">Add to Cart</a> $700
+      <a href="#" class="btn btn-primary" id="item6" value=700>$700</a>
   </div>
 </div>
   </div>
