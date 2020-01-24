@@ -18,12 +18,12 @@
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>My First Bootstrap 4 Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
+  <h1>Get UR Stuff N Get Out</h1>
+  <p>We love your support please feel free to invite your friends to shope here too!</p> 
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Shop</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,12 +31,6 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="#">Cart</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
       </li>    
     </ul>
   </div>  
@@ -44,8 +38,20 @@
 
 <div class="container" style="margin-top:30px">
   <div class="row">
-  <h2>Card Image</h2>
-  <p>Image at the top (card-img-top):</p>
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
   <div class="card" style="width:400px">
     <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
     <div class="card-body">
