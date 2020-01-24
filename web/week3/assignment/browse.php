@@ -13,6 +13,9 @@
     height: 200px;
     background: #aaa;
   }
+  .card{
+      width:300px;
+  }
   </style>
 </head>
 <body>
@@ -38,7 +41,7 @@
 
 <div class="container" style="margin-top:30px">
   <div class="row">
-  <div class="card" style="width:400px">
+  <div class="card">
     <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
@@ -46,7 +49,7 @@
       <a href="#" class="btn btn-primary">Add to Cart</a>
   </div>
 </div>
-<div class="card" style="width:400px">
+<div class="card" >
     <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
@@ -54,7 +57,7 @@
       <a href="#" class="btn btn-primary">Add to Cart</a>
   </div>
 </div>
-<div class="card" style="width:400px">
+<div class="card">
     <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
