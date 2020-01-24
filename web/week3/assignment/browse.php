@@ -34,7 +34,6 @@
          //$_SESSION["Items"] = {[1,200,"hotdog"],[1,300,"taco"]};
          $_SESSION["favanimal"] = "dolphin";
          // echo that variables have been set
-         echo "Session variables have been set.";
 ?>
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>Get UR Stuff N Get Out</h1>
@@ -49,10 +48,10 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="cart.php" href="#">Cart</a>
+        <a class="nav-link" href="cart.php">Cart</a>
       </li>   
       <li class="nav-item">
-        <a class="../index.php" href="#">Home</a>
+        <a class="nav-link" href="../index.php">Home</a>
       </li>   
     </ul>
   </div>  
