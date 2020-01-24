@@ -46,7 +46,7 @@
 
 <div class="container" style="margin-top:30px">
   <div class="row">
-  <div class="card">
+  <div class="card" id="card1">
     <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
@@ -54,7 +54,7 @@
       <a href="#" class="btn btn-primary">Add to Cart</a>
   </div>
 </div>
-<div class="card" >
+<div class="card" id="card2">
     <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
@@ -62,7 +62,31 @@
       <a href="#" class="btn btn-primary">Add to Cart</a>
   </div>
 </div>
-<div class="card">
+<div class="card"id="card3">
+    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+<div class="card"id="card4">
+    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+<div class="card"id="card5">
+    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+<div class="card"id="card6">
     <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
@@ -74,7 +98,7 @@
 </div>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Footer</p>
+  <p>Your Too low the stuff is up there!</p>
 </div>
 
 </body>
