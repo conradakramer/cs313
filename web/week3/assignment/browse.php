@@ -14,7 +14,7 @@
     background: #aaa;
   }
   .card{
-      min-width:350px;
+      width:350px;
       margin: 10px;
   }
   .container{
