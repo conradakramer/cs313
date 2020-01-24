@@ -5,4 +5,5 @@
    $a = $_SESSION["animal"];
 ?>
 <h1>your fave color is <?$c?> your favorate animal is <?$a?></h1>
+<h3></h3>
 <?php ?>
