@@ -31,7 +31,7 @@
 <?php
          // remove previous session variable
          // Set session variables
-         //$_SESSION["Items"] = {[1,200,"hotdog"],[1,300,"taco"]};
+         $_SESSION["Items"] = [0,0,0,0,0,0];
          $_SESSION["favanimal"] = "dolphin";
          // echo that variables have been set
 ?>
