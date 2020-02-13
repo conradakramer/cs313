@@ -1,0 +1,23 @@
+{
+    "folders": [
+		{
+			"path": "/Users/conradkramer/Desktop/React"
+		},
+		{
+			"path": "/Users/conradkramer/Documents/GitHub/CIT-261"
+		},
+		{
+			"path": "/Users/conradkramer/Documents/GitHub/cs313-php"
+		},
+		{
+			"path": "/Users/conradkramer/Documents/GitHub/yolked_app"
+		},
+		{
+			"path": "/Users/conradkramer/Desktop/kra16007"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "cs313-php",
+        "git.ignoreLimitWarning": true
+    }
+}

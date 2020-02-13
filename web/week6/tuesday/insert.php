@@ -15,6 +15,9 @@ try
 	$statement->bindValue(':last',$last);
 	$statement->bindValue(':food',$food);
 	$statement->execute();
+
+
+	$userId = $db->lastInsertId("w6_user_id_seq");
 }
 catch (Exception $ex)
 {
