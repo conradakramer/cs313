@@ -9,14 +9,14 @@ $db = get_db();
 
 try
 {
-	$query = 'INCSRT INTO public.user (username, password) VALUES (:user, :pass)';
+	$query = 'INSERT INTO person (username, password) VALUES (:user, :pass)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':user',$user);
 	$statement->bindValue(':pass',$pass);
 	$statement->execute();
 
 
-	$userId = $db->lastInsertId("public.user_id_seq");
+	$userId = $db->lastInsertId("user_id_seq");
 }
 catch (Exception $ex)
 {
