@@ -11,45 +11,22 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     </head>
-    <?php
-	require("dbConnect.php");
-	$db = get_db();
-?>
+  
     <body>
         
-    <div class="container" style="margin-top:50px;">
-      <form action="insert.php" method="POST">
-         <div class="form-row">
-            <div class="col">
-               <input type="text" class="form-control" placeholder="" name="first">
-            </div>
-            <div class="col">
-               <input type="text" class="form-control" placeholder="Last name" name="last">
-            </div>
-            <div class="col">
-                  <select id="inputFood" class="form-control" name="food">
-                     
-                     
-                     
-                     
-                     <?php
-                       $statement = $db->prepare("SELECT * FROM w6_food");
-                       $statement->execute();
-                       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-                       {
-                          $id   = $row['id'];
-                          $food = $row['food'];
-                          echo "<option value='$id'>$food</option>";
-                       }
-                     ?>
-                  </select>
-               </div>
-               <div class="col">
-                  <button class="btn btn-primary" type="submit">Save me some food</button>
-               </div>
-         </div>
-      </form>
-   </div>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+            <div class="form-group form-check">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
         <script src="" async defer></script>
     </body>
 </html>
