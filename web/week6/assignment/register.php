@@ -11,8 +11,8 @@ try
 {
 	$query = 'INCSRT INTO public.user (username, password) VALUES (:user, :pass)';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':first',$first);
-	$statement->bindValue(':last',$last);
+	$statement->bindValue(':user',$user);
+	$statement->bindValue(':pass',$pass);
 	$statement->execute();
 
 
