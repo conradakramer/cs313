@@ -16,7 +16,17 @@
 	    $db = get_db();
     ?>
     <body>
-        
+<div class="card w-75">
+  <div class="card-body">
+   
+    <form action="addQuestion.php" method="POST">
+    <h5 class="card-title"><input type="text"></h5>
+    <p class="card-text"><textarea name="question" id="question" cols="30" rows="10"></textarea></p>
+  
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+</div>
     
         <script src="" async defer></script>
     </body>
