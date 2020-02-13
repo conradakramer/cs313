@@ -1,7 +1,8 @@
 <?php
 $user = $_POST["username"];
 $pass = $_POST["password"];
-
+echo "username is: $user";
+echo "password is: $pass";
 
 
 require("dbConnect.php");
@@ -16,7 +17,7 @@ try
 	$statement->execute();
 
 
-	$userId = $db->lastInsertId("user_id_seq");
+	$userId = $db->lastInsertId("person_id_seq");
 }
 catch (Exception $ex)
 {
