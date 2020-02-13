@@ -21,7 +21,7 @@
    
     <form action="addQuestion.php" method="POST">
     <h5 class="card-title"><input type="text"></h5>
-    <p class="card-text"><textarea name="question" id="question" cols="30" rows="100"></textarea></p>
+    <p class="card-text"><textarea name="question" id="question" cols="300" rows="10"></textarea></p>
   
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
