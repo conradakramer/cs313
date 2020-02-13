@@ -29,6 +29,21 @@
         <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week3/assignment/browse.php'">Week 03 - Shoping</button>
       </div>
     </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week4/assignment/browse.php'">Week 04 - n/a</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week3/assignment/browse.php'">Week 05 - n/a</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week6/assignment/main.php'">Week 06 - Server</button>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
