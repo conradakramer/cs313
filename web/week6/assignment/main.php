@@ -9,11 +9,11 @@
     <form action="register.php" method="POST">
         <div class="form-group" >
             <label for="exampleInputEmail1">Username</label>
-            <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password">
+            <input type="password" class="form-control" id="password" name="password">
         </div>
             <div class="form-group form-check">
         </div>
