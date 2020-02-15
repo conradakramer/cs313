@@ -21,7 +21,7 @@
             $id         = $row['id'];
             $userId     = $row['user_id'];
             $question   = $row['question_id'];
-            $answer       = $row['answer'];
+            $answer     = $row['answer'];
 
 
             $users = $db->prepare("SELECT username FROM person WHERE ID = $userId");
@@ -30,12 +30,7 @@
             {
                 $username = $URow['username'];
             }
-            $questions = $db->prepare("SELECT question FROM questions WHERE ID = $question");
-            $users->execute();
-            while ($QRow = $users->fetch(PDO::FETCH_ASSOC))
-            {
-                $question = $QRow['question'];
-            }
+            
 
 
             echo "
