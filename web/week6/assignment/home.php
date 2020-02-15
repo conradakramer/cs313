@@ -9,15 +9,10 @@
 
 
 
-
-
-
-            // retrieve url parameter
-            $personId = $_GET('personId');
-            // execute query to pull up data from that id
-            $statement = $db->prepare('SELECT * FROM person WHERE Id =  :personId');
-            $statement->bindvalue(':personId', $personId);
-            $statement->execuite();
+            $personId = $_GET['personId'];
+            $statement = $db->prepare('SELECT * FROM person WHERE Id = :personId');
+            $statement->bindValue(':personId', $personId);
+            $statement->execute();
             while($row = $statement->fetch(PDO::FETCH_ASSOC))
             {
                $id      = $row['id'];
