@@ -30,8 +30,6 @@ try
 
     $statement->execute();
 
-
-	$userId = $db->lastInsertId("question_id_seq");
 }
 catch (Exception $ex)
 {
