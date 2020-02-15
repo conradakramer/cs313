@@ -1,3 +1,6 @@
+    <?php
+        session_start();
+    ?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <?php
 	    require("dbConnect.php");
@@ -8,6 +11,7 @@
     <?php
 
         $personId = $_GET['personId'];
+        $_SESSION["userId"] = $personid;
         $statement = $db->prepare('SELECT * FROM person WHERE Id = :personId');
         $statement->bindValue(':personId', $personId);
         $statement->execute();
@@ -30,7 +34,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">New Question:</span>
                 </div>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
+                <textarea class="form-control" aria-label="With textarea"name="question"></textarea>
             </div>
             <button type="submit" class="btn btn-secondary btn-sm" >Ask Question!</button>
         </form>
@@ -64,9 +68,9 @@
         echo "<form action=\"question.php\" method=\"POST\">
                 <div class=\"card\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title\">$username - $date </h5>
+                        <h5 class=\"card-title\">$username - $date -  </h5>
                         <p class=\"card-text\"> $question </p>
-                        <a href='' class=\"btn btn-primary\">Answer Qestion</a>
+                        <a href=\"question.php\" class=\"btn btn-primary\">Answer Qestion</a>
                     </div>
                 </div>
              </form>";

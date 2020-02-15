@@ -1,9 +1,12 @@
 <?php
+session_start();
+
+
+
 $user = $_POST["username"];
 $pass = $_POST["password"];
-echo "username is: $user";
-echo "password is: $pass";
 
+$_SESSION["username"] = $user;
 
 require("dbConnect.php");
 $db = get_db();

@@ -15,7 +15,8 @@ CREATE TABLE person(
 CREATE TABLE question(
     id SERIAL NOT NULL PRIMARY KEY,
     user_id INT NOT NULL REFERENCES person(id),
-    question VARCHAR(2000) NOT NULL
+    question VARCHAR(2000) NOT NULL,
+    added VARCHAR(40) NOT NULL
 );
 
 
