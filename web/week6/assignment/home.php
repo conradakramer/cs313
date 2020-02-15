@@ -11,10 +11,12 @@
         $statement = $db->prepare('SELECT * FROM person WHERE Id = :personId');
         $statement->bindValue(':personId', $personId);
         $statement->execute();
+        $tempuser = '';
         while($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
         $id      = $row['id'];
         $user    = $row['username'];
+        $tempuser = $user;
         $pass    = $row['password'];
         echo "<h1> Welcome Back $user </h1>";
         }
@@ -36,10 +38,45 @@
 
 		</div>
    
+        <?php
+
+        //$personId = $_GET['personId'];
+        $statement = $db->prepare('SELECT * FROM question');
+        //$statement->bindValue(':personId', $personId);
+        $statement->execute();
+        while($row = $statement->fetch(PDO::FETCH_ASSOC))
+        {
+        $id         = $row['id'];
+        $userId     = $row['user_id'];
+        $question   = $row['question'];
+        $date       = $row['added'];
+
+
+        $users = $db->prepare("SELECT username FROM person WHERE id = $userId");
+        $users->execute();
+        while ($URow = $users->fetch(PDO::FETCH_ASSOC))
+        {
+           $username = $URow['username'];
+        }
 
 
 
+        echo "<form action=\"question.php\" method=\"POST\">
+                <div class=\"card\">
+                    <div class=\"card-body\">
+                        <h5 class=\"card-title\">$username - $date </h5>
+                        <p class=\"card-text\"> $question </p>
+                        <a href='' class=\"btn btn-primary\">Answer Qestion</a>
+                    </div>
+                </div>
+             </form>";
+        }
+        // execute another query to get food data
+        // display name and favorite food
+        ?>
 
+
+        
 
 
 
