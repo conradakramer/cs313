@@ -71,7 +71,7 @@
                     </div>";
         }
     ?>
-    <form action="../postAnswer.php" method="POST">
+    <form action="postAnswer.php" method="POST">
         <div class="card w-100">
             <div class="card-body">
             <textarea class="form-control" aria-label="With textarea" name="question"></textarea>
