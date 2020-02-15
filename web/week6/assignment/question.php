@@ -9,9 +9,41 @@
 
 
     <?php
+
+        
         $questionId = $_POST['questionId'];
         $personId = $_POST['userId']; 
-        echo"<H1>QuestionId: $questionId  PersonId: $personId </H1>";
+        
+
+
+        $statement2 = $db->prepare("SELECT * FROM questions WHERE ID = $questionId");
+        $statement2->execute();
+        while($row = $statement2->fetch(PDO::FETCH_ASSOC))
+        {
+            $id         = $row['id'];
+            $userId     = $row['user_id'];
+            $question   = $row['question'];
+            $date       = $row['added'];
+
+
+            $users = $db->prepare("SELECT username FROM person WHERE ID = $userId");
+            $users->execute();
+            while ($URow = $users->fetch(PDO::FETCH_ASSOC))
+            {
+            $username = $URow['username'];
+            }
+
+
+
+            echo "<form action=\"../question.php\" method=\"POST\">
+                    <div class=\"card\">
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\"> Question from: $username - $date  </h5>
+                            <p class=\"card-text\" name=\"question\"> $question </p>
+                        </div>
+                    </div>
+                </form>";
+        }
         $statement = $db->prepare("SELECT * FROM answer WHERE ID = $questionId");
         //echo"<H1>Question: </H1>";
         
