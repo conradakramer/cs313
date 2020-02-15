@@ -79,6 +79,7 @@
             <textarea class=\"form-control\" aria-label=\"With textarea\" name=\"question\"></textarea>
             <input type=\"hidden\" name=\"userId\" value=\" $userId \">
             <input type=\"hidden\" name=\"questionId\" value=\" $id \">
+            <input type=\"hidden\" name=\"personId\" value=\" $personId \">
             <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
             </div>
         </div>
