@@ -11,7 +11,7 @@
     <?php
 
         $personId = $_GET['personId'];
-        $_SESSION['userId'] = $personid;
+        $_SESSION['personId'] = $personid;
         $statement = $db->prepare('SELECT * FROM person WHERE Id = :personId');
         $statement->bindValue(':personId', $personId);
         $statement->execute();
