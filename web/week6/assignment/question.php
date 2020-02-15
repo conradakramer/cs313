@@ -16,7 +16,7 @@
         echo"<H1>Question: </H1>";
         
         $statement->execute();
-        while($row = $statement2->fetch(PDO::FETCH_ASSOC))
+        while($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
             $id         = $row['id'];
             $userId     = $row['user_id'];
