@@ -29,7 +29,7 @@
         ?>
          
          
-        <form action="postQuestion.php" method="POST">
+        <form action="../postQuestion.php" method="POST">
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">New Question:</span>
