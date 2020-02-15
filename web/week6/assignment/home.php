@@ -42,7 +42,11 @@
 
 		</div>
    
-        <?php
+        <?php/*
+
+
+
+
 
         //$personId = $_GET['personId'];
         $statement = $db->prepare('SELECT * FROM question');
@@ -62,14 +66,22 @@
         {
            $username = $URow['username'];
         }
+*/
+
+
+        $result = pg_query($db,"SELECT * FROM question");
+        while($row=pg_fetch_assoc($result)){
+
+
+
 
 
 
         echo "<form action=\"question.php\" method=\"POST\">
                 <div class=\"card\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title\"> Question from: $username - $date  </h5>
-                        <p class=\"card-text\"> $question </p>
+                        <h5 class=\"card-title\"> Question from:  $username - " . $row['date'] . " </h5>
+                        <p class=\"card-text\"> " . $row['question'] . " </p>
                         <a href=\"question.php\" class=\"btn btn-primary\">Answer Qestion</a>
                     </div>
                 </div>
