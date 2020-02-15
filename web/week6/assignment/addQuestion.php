@@ -3,7 +3,7 @@ session_start();
 require("dbConnect.php");
 $db = get_db();
 
-$userid = $_SESSION["userId"];
+$personId = $_POST["personId"];
 $user = $_SESSION["username"];
 $question = $_POST["question"];
 $qdate = date("Y-m-d");
@@ -22,9 +22,9 @@ added DATE NOT NULL*/
 
 try
 {
-	$query = 'INSERT INTO questions (user_id, question, added) VALUES (:userid, :question, :qdate)';
+	$query = 'INSERT INTO questions (user_id, question, added) VALUES (:personId, :question, :qdate)';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':userid',$userid);
+	$statement->bindValue(':personId',$personId);
     $statement->bindValue(':question',$question);
     $statement->bindValue(':qdate',$qdate);
 
