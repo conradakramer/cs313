@@ -7,7 +7,7 @@ $personId = $_POST["personId"];
 $user = $_SESSION["username"];
 $question = $_POST["question"];
 $qdate = date("Y-m-d");
-echo "userid: $userid and user: $user";
+echo "userid: $personId and user: $user";
 
 
 
