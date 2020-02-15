@@ -29,7 +29,7 @@
         ?>
          
          
-        <form action="../addQuestion.php" method="POST">
+        <form action="addQuestion.php" method="POST">
             <div class="input-group">
                 <div class="input-group-prepend">
                     <input type="hidden" name="personId" value="<?php $personId ?>"/>  
