@@ -24,12 +24,13 @@ try
 {
 	$query = 'INSERT INTO question (user_id, question) VALUES (:userId, :question , :qdate)';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':user',$user);
-	$statement->bindValue(':pass',$pass);
+	$statement->bindValue(':userId',$userId);
+    $statement->bindValue(':question',$question);
+    $statement->bindValue(':qdate',$qdate);
 	$statement->execute();
 
 
-	$userId = $db->lastInsertId("person_id_seq");
+	$userId = $db->lastInsertId("question_id_seq");
 }
 catch (Exception $ex)
 {
