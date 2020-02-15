@@ -17,15 +17,15 @@
         $personId = $_POST["personId"]; 
 
         $statement = $db->prepare("SELECT * FROM answer");
-        echo"<H1>Question: </H1>;
+        echo"<H1>Question: </H1>";
         
         $statement->execute();
         while($row = $statement2->fetch(PDO::FETCH_ASSOC))
         {
             $id         = $row['id'];
             $userId     = $row['user_id'];
-            $question   = $row['question'];
-            $date       = $row['added'];
+            $question   = $row['question_id'];
+            $answer       = $row['answer'];
 
 
             $users = $db->prepare("SELECT username FROM person WHERE ID = $userId");
