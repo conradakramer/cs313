@@ -29,13 +29,13 @@
         ?>
          
          
-        <form action="addQuestion.php" method="POST">
+        <form action="../addQuestion.php" method="POST">
             <div class="input-group">
                 <div class="input-group-prepend">
                     <input type="hidden" name="personId" value="<?php $personId ?>"/>  
                     <span class="input-group-text">New Question:</span>
                 </div>
-                <textarea class="form-control" aria-label="With textarea"name="question"></textarea>
+                <textarea class="form-control" aria-label="With textarea" name="question"></textarea>
             </div>
             <button type="submit" class="btn btn-secondary btn-sm" >Ask Question!</button>
         </form>
