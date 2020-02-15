@@ -77,7 +77,7 @@
                             <p class=\"card-text\"> $question </p>
                             <input type=\"hidden\" name=\"personId\" value=\"<?php $personId ?>\"/> 
                             <input type=\"hidden\" name=\"questionId\" value=\"<?php $id ?>\"/> 
-                            <a href=\"question.php\" class=\"btn btn-primary\">Answer Qestion</a>
+                            <a href=\"../question.php/?personId=\"<?php $personId ?>\"?questionId=\"<?php $id ?>\"\" class=\"btn btn-primary\">Answer Qestion</a>
                         </div>
                     </div>
                 </form>";
