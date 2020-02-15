@@ -7,6 +7,7 @@ $userId = $_POST['userId'];
 $personId = $_SESSION['personId'];
 $user = $_SESSION['username'];
 $question_id = $_POST['questionId'];
+$question = $_POST['question'];
 $qdate = date('Y-m-d');
 echo"userid: $userId  personId: $personId question_id: $question_id";
 //echo "userid: $personId and user: $user";
@@ -17,7 +18,7 @@ CREATE TABLE answer(
     user_id INT NOT NULL REFERENCES person(id),
     question_id INT NOT NULL REFERENCES questions(id),
     answer VARCHAR(2000) NOT NULL
-);
+);*/
 
 try
 {
@@ -37,5 +38,5 @@ catch (Exception $ex)
 }
 header("Location: question.php/?personId=$userId?questionId=$question_id");
 
-die(); */
+die(); 
 ?>
