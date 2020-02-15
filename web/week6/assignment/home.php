@@ -49,7 +49,7 @@
 
 
         //$personId = $_GET['personId'];
-        echo"$statement";
+        echo"<h1>hello</h1>";
         $statement = $db->prepare('SELECT * FROM question');
         echo"$statement";
         //$statement->bindValue(':personId', $personId);
