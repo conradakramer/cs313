@@ -50,7 +50,7 @@
 
         //$personId = $_GET['personId'];
         echo"<h1>hello</h1>";
-        $statement2 = $db->prepare("SELECT * FROM question");
+        $statement2 = $db->prepare("SELECT * FROM questions");
         
         //$statement->bindValue(':personId', $personId);
         $statement2->execute();
