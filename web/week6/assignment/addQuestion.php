@@ -18,7 +18,7 @@ echo "userid: $personId and user: $user";
 /*id SERIAL NOT NULL PRIMARY KEY,
 user_id INT NOT NULL REFERENCES person(id),
 question VARCHAR(2000) NOT NULL,
-added DATE NOT NULL*//*
+added DATE NOT NULL*/
 
 try
 {
@@ -40,5 +40,5 @@ catch (Exception $ex)
 }
 header("Location: home.php/?personId=$userId");
 
-die(); */
+die(); 
 ?>
