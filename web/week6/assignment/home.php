@@ -42,7 +42,7 @@
 
 		</div>
    
-        <?php/*
+        <?php
 
 
 
@@ -54,41 +54,32 @@
         $statement->execute();
         while($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-        $id         = $row['id'];
-        $userId     = $row['user_id'];
-        $question   = $row['question'];
-        $date       = $row['added'];
+            $id         = $row['id'];
+            $userId     = $row['user_id'];
+            $question   = $row['question'];
+            $date       = $row['added'];
 
 
-        $users = $db->prepare("SELECT username FROM person WHERE id = $user_id");
-        $users->execute();
-        while ($URow = $users->fetch(PDO::FETCH_ASSOC))
-        {
-           $username = $URow['username'];
-        }
-*/
-
-
-        $result = pg_query($db,"SELECT * FROM question");
-        while($row=pg_fetch_assoc($result)){
+            $users = $db->prepare("SELECT username FROM person WHERE ID = $userId");
+            $users->execute();
+            while ($URow = $users->fetch(PDO::FETCH_ASSOC))
+            {
+            $username = $URow['username'];
+            }
 
 
 
-
-
-
-        echo "<form action=\"question.php\" method=\"POST\">
-                <div class=\"card\">
-                    <div class=\"card-body\">
-                        <h5 class=\"card-title\"> Question from:  $username - " . $row['date'] . " </h5>
-                        <p class=\"card-text\"> " . $row['question'] . " </p>
-                        <a href=\"question.php\" class=\"btn btn-primary\">Answer Qestion</a>
+            echo "<form action=\"question.php\" method=\"POST\">
+                    <div class=\"card\">
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\"> Question from: $username - $date  </h5>
+                            <p class=\"card-text\"> $question </p>
+                            <a href=\"question.php\" class=\"btn btn-primary\">Answer Qestion</a>
+                        </div>
                     </div>
-                </div>
-             </form>";
+                </form>";
         }
-        // execute another query to get food data
-        // display name and favorite food
+
         ?>
 
 
