@@ -50,7 +50,6 @@
 
         //$personId = $_GET['personId'];
         $statement2 = $db->prepare("SELECT * FROM questions");
-        
         //$statement->bindValue(':personId', $personId);
         $statement2->execute();
         while($row = $statement2->fetch(PDO::FETCH_ASSOC))

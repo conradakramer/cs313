@@ -11,7 +11,7 @@
     <?php
         $questionId = $_POST['questionId'];
         $personId = $_POST['personId']; 
-        echo"<H1>QuestionId: $questionId </H1>";
+        echo"<H1>QuestionId: $questionId  PersonId: $personId </H1>";
         $statement = $db->prepare("SELECT * FROM answer WHERE ID = $questionId");
         //echo"<H1>Question: </H1>";
         
