@@ -5,16 +5,20 @@
 	    $db = get_db();
     ?>
     <body>
+
+    
     
 
 
 
 
     <?php
-    //$personId = $_GET['personId'];
-        $statement = $db->prepare("SELECT * FROM questions");
+        $questionId = $_POST["questionId"];
+        $personId = $_POST["personId"]; 
+
+        $statement = $db->prepare("SELECT * FROM answer");
+        echo"<H1>Question: </H1>;
         
-        //$statement->bindValue(':personId', $personId);
         $statement->execute();
         while($row = $statement2->fetch(PDO::FETCH_ASSOC))
         {
