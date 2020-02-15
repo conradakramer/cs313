@@ -5,7 +5,7 @@ session_start();
 $userId = $_SESSION["userId"];
 $user = $_SESSION["username"];
 $question = $_POST["question"];
-$date = date("Y-m-d");
+$qdate = date("Y-m-d");
 
 
 require("dbConnect.php");
@@ -15,14 +15,14 @@ $db = get_db();
 
 
 
-id SERIAL NOT NULL PRIMARY KEY,
+/*id SERIAL NOT NULL PRIMARY KEY,
 user_id INT NOT NULL REFERENCES person(id),
 question VARCHAR(2000) NOT NULL,
-added DATE NOT NULL
+added DATE NOT NULL*/
 
 try
 {
-	$query = 'INSERT INTO question (userId, question) VALUES (:user, :pass)';
+	$query = 'INSERT INTO question (user_id, question) VALUES (:userId, :question , :qdate)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':user',$user);
 	$statement->bindValue(':pass',$pass);
