@@ -27,6 +27,9 @@ CREATE TABLE answer(
     answer VARCHAR(2000) NOT NULL
 );
 
+INSERT INTO person (username, password) VALUES ('testing', 'testing' );
+INSERT INTO questions (user_id, question, added) VALUES (1, 'how many days are there in a year?', '2020-02-15');
+INSERT INTO answer (user_id, question_id, answer) VALUES (1, 1, 'you dont have to do anything just jump off the bridge');
 
 
 
