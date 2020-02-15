@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+require("dbConnect.php");
+$db = get_db();
 
 $userid = $_SESSION["userId"];
 $user = $_SESSION["username"];
@@ -8,8 +9,7 @@ $question = $_POST["question"];
 $qdate = date("Y-m-d");
 echo "userid: $userid and user: $user";
 
-require("dbConnect.php");
-$db = get_db();
+
 
 
 

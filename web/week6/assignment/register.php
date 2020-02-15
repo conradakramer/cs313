@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require("dbConnect.php");
+$db = get_db();
 
 
 $user = $_POST["username"];
@@ -8,8 +10,6 @@ $pass = $_POST["password"];
 
 $_SESSION["username"] = $user;
 
-require("dbConnect.php");
-$db = get_db();
 
 try
 {
