@@ -4,8 +4,8 @@ session_start();
 
 $userid = $_SESSION["userId"];
 $user = $_SESSION["username"];
-$question = strval($_POST["question"]);
-$qdate = strval(date("Y-m-d"));
+$question = $_POST["question"];
+$qdate = date("Y-m-d");
 echo "userid: $userid and user: $user";
 
 require("dbConnect.php");
