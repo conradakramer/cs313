@@ -56,7 +56,7 @@
         $date       = $row['added'];
 
 
-        $users = $db->prepare("SELECT username FROM person WHERE id = $userId");
+        $users = $db->prepare("SELECT username FROM person WHERE id = $user_id");
         $users->execute();
         while ($URow = $users->fetch(PDO::FETCH_ASSOC))
         {
@@ -68,7 +68,7 @@
         echo "<form action=\"question.php\" method=\"POST\">
                 <div class=\"card\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title\">$username - $date -  </h5>
+                        <h5 class=\"card-title\"> Question from: $username - $date  </h5>
                         <p class=\"card-text\"> $question </p>
                         <a href=\"question.php\" class=\"btn btn-primary\">Answer Qestion</a>
                     </div>
