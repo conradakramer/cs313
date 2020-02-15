@@ -6,7 +6,7 @@ $userId = $_SESSION["userId"];
 $user = $_SESSION["username"];
 $question = $_POST["question"];
 $qdate = date("Y-m-d");
-
+echo "userid: $userId and user: $user";
 
 require("dbConnect.php");
 $db = get_db();
@@ -37,7 +37,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: home.php/?personId=$userId");
+//header("Location: home.php/?personId=$userId");
 
 die(); 
 ?>
