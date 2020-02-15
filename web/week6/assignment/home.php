@@ -5,24 +5,34 @@
     ?>
     <body>
     <div class="container">
-         <?php
+    <?php
 
-
-
-            $personId = $_GET['personId'];
-            $statement = $db->prepare('SELECT * FROM person WHERE Id = :personId');
-            $statement->bindValue(':personId', $personId);
-            $statement->execute();
-            while($row = $statement->fetch(PDO::FETCH_ASSOC))
-            {
-               $id      = $row['id'];
-               $user   = $row['username'];
-               $pass    = $row['password'];
-               echo "<h1>$user your password is $pass</h1>";
-            }
-            // execute another query to get food data
-            // display name and favorite food
-         ?>
+        $personId = $_GET['personId'];
+        $statement = $db->prepare('SELECT * FROM person WHERE Id = :personId');
+        $statement->bindValue(':personId', $personId);
+        $statement->execute();
+        while($row = $statement->fetch(PDO::FETCH_ASSOC))
+        {
+        $id      = $row['id'];
+        $user    = $row['username'];
+        $pass    = $row['password'];
+        //echo "<h1>$user your password is $pass</h1>";
+        }
+        // execute another query to get food data
+        // display name and favorite food
+        ?>
+         
+         <H1>welcome back <?php $user?> </H1>
+        <form action="postQuestion.php">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">New Question:</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-sm" >Ask Question!</button>
+        </form>
+         
 
 		</div>
    
