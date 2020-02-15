@@ -3,7 +3,7 @@ session_start();
 require("dbConnect.php");
 $db = get_db();
 
-$personId = $_POST['personId'];
+$personId = $_SESSION['personId'];
 $user = $_SESSION['username'];
 $question = $_POST['question'];
 $qdate = date('Y-m-d');
@@ -18,7 +18,7 @@ echo "userid: $personId and user: $user";
 /*id SERIAL NOT NULL PRIMARY KEY,
 user_id INT NOT NULL REFERENCES person(id),
 question VARCHAR(2000) NOT NULL,
-added DATE NOT NULL
+added DATE NOT NULL*/
 
 try
 {
@@ -40,5 +40,5 @@ catch (Exception $ex)
 }
 header("Location: home.php/?personId=$userId");
 
-die(); */
+die(); 
 ?>
