@@ -41,7 +41,7 @@
             echo "
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            <h5 class=\"card-title\"> Question from: $username - $date  </h5>
+                            <h5 class=\"card-title\"> Question from: $username   </h5>
                             <p class=\"card-text\"> $answer </p>
                         </div>
                     </div>";
