@@ -7,7 +7,7 @@
     <div class="container">
          <?php
             // retrieve url parameter
-            $personId = $_GET('perconId');
+            $personId = $_GET('personId');
             // execute query to pull up data from that id
             $statement = $db->prepare('SELECT * FROM user WHERE ID =  :personId');
             $statement->bindvalue(':personId', $personId);
