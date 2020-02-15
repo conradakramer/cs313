@@ -69,7 +69,7 @@
 
 
 
-            echo "<form action=\"question.php\" method=\"POST\">
+            echo "<form action=\"../question.php\" method=\"POST\">
                     <div class=\"card\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\"> Question from: $username - $date  </h5>
