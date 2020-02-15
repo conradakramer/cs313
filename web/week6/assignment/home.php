@@ -16,13 +16,13 @@
         $id      = $row['id'];
         $user    = $row['username'];
         $pass    = $row['password'];
-        //echo "<h1>$user your password is $pass</h1>";
+        echo "<h1> Welcome Back $user </h1>";
         }
         // execute another query to get food data
         // display name and favorite food
         ?>
          
-         <H1>welcome back <?php $user?> </H1>
+         
         <form action="postQuestion.php">
             <div class="input-group">
                 <div class="input-group-prepend">
