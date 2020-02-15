@@ -3,10 +3,10 @@ session_start();
 require("dbConnect.php");
 $db = get_db();
 
-$personId = $_POST["personId"];
-$user = $_SESSION["username"];
-$question = $_POST["question"];
-$qdate = date("Y-m-d");
+$personId = $_POST['personId'];
+$user = $_SESSION['username'];
+$question = $_POST['question'];
+$qdate = date('Y-m-d');
 echo "userid: $personId and user: $user";
 
 
