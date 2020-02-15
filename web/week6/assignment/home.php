@@ -49,7 +49,9 @@
 
 
         //$personId = $_GET['personId'];
+        echo"$statement";
         $statement = $db->prepare('SELECT * FROM question');
+        echo"$statement";
         //$statement->bindValue(':personId', $personId);
         $statement->execute();
         while($row = $statement->fetch(PDO::FETCH_ASSOC))
