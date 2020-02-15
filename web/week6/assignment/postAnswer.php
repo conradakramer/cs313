@@ -22,7 +22,7 @@ CREATE TABLE answer(
 
 try
 {
-	$query = 'INSERT INTO questions (user_id, question_id, answer) VALUES (:personId, :question_id, :answer)';
+	$query = 'INSERT INTO answer (user_id, question_id, answer) VALUES (:personId, :question_id, :answer)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':personId',$personId);
     $statement->bindValue(':question_id',$question_id);
