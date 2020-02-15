@@ -1,5 +1,5 @@
 DROP TABLE answer;
-DROP TABLE question;
+DROP TABLE questions;
 DROP TABLE person;
 
 
@@ -12,7 +12,7 @@ CREATE TABLE person(
 
 
 
-CREATE TABLE question(
+CREATE TABLE questions(
     id SERIAL NOT NULL PRIMARY KEY,
     user_id INT NOT NULL REFERENCES person(id),
     question VARCHAR(2000) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE question(
 CREATE TABLE answer(
     id SERIAL NOT NULL PRIMARY KEY,
     user_id INT NOT NULL REFERENCES person(id),
-    question_id INT NOT NULL REFERENCES question(id),
+    question_id INT NOT NULL REFERENCES questions(id),
     answer VARCHAR(2000) NOT NULL
 );
 

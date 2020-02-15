@@ -2,11 +2,11 @@
 session_start();
 
 
-$userId = $_SESSION["userId"];
+$userid = $_SESSION["userId"];
 $user = $_SESSION["username"];
-$question = $_POST["question"];
-$qdate = date("Y-m-d");
-echo "userid: $userId and user: $user";
+$question = strval($_POST["question"]);
+$qdate = strval(date("Y-m-d"));
+echo "userid: $userid and user: $user";
 
 require("dbConnect.php");
 $db = get_db();
@@ -22,12 +22,13 @@ added DATE NOT NULL*/
 
 try
 {
-	$query = 'INSERT INTO question (user_id, question, added) VALUES (:userId, :question , :qdate)';
+	$query = 'INSERT INTO questions (user_id, question, added) VALUES (:userid, :question, :qdate)';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':userId',$userId);
+	$statement->bindValue(':userid',$userid);
     $statement->bindValue(':question',$question);
     $statement->bindValue(':qdate',$qdate);
-	$statement->execute();
+
+    $statement->execute();
 
 
 	$userId = $db->lastInsertId("question_id_seq");
@@ -37,7 +38,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-//header("Location: home.php/?personId=$userId");
+header("Location: home.php/?personId=$userId");
 
 die(); 
 ?>
