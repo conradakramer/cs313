@@ -50,13 +50,13 @@
 
         //$personId = $_GET['personId'];
         echo"<h1>hello</h1>";
-        $statement2 = $db->prepare('SELECT * FROM question');
+        $statement2 = $db->prepare("SELECT * FROM question");
         
         //$statement->bindValue(':personId', $personId);
         $statement2->execute();
         while($row = $statement2->fetch(PDO::FETCH_ASSOC))
         {
-            echo"this is working";
+            echo"<h1>hello</h1>";
             $id         = $row['id'];
             $userId     = $row['user_id'];
             $question   = $row['question'];
