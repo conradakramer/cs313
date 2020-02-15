@@ -54,6 +54,7 @@
         $statement->execute();
         while($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
+            echo"this is working";
             $id         = $row['id'];
             $userId     = $row['user_id'];
             $question   = $row['question'];
