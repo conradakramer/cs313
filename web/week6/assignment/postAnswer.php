@@ -4,7 +4,7 @@ require("dbConnect.php");
 $db = get_db();
 
 $userId = $_POST['userId'];
-$personId = $_SESSION['personId'];
+$personId = $_POST['personId'];
 $user = $_SESSION['username'];
 $question_id = $_POST['questionId'];
 $answer = $_POST['question'];
@@ -36,7 +36,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: question.php/?personId=$userId?questionId=$question_id");
+header("Location: question.php/?personId=$userId");
 
 die(); 
 ?>
