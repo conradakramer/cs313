@@ -18,9 +18,6 @@
                $id      = $row['id'];
                $user   = $row['username'];
                $pass    = $row['password'];
-
-               $statement ->execute();
-              
                echo "<h1>$user your password is $pass</h1>";
             }
             // execute another query to get food data
