@@ -72,7 +72,7 @@
         }
 
 
-
+        echo"userid:$userId questionid:$id  personid:$personId ";
         echo "<form action=\"postAnswer.php\" method=\"POST\">
         <div class=\"card w-100\">
             <div class=\"card-body\">
