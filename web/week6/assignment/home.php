@@ -73,13 +73,15 @@
                     <div class=\"card\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\"> Question from: $username - $date  </h5>
-                            <p class=\"card-text\"> $question </p>
-                            <a href=\"../question.php/?personId=$personId?questionId=$id\" class=\"btn btn-primary\">Answer Qestion</a>
+                            <p class=\"card-text\" name=\"question\"> $question </p>
+                            <input type=\"hidden\" name=\"userId\" value=\"$userId\">
+                            <input type=\"hidden\" name=\"questionId\" value=\"$id\">
+                            <button type=\"submit\" class=\"btn btn-primary\">Answer Qestion</button>
                         </div>
                     </div>
                 </form>";
         }
-
+//<a href=\"../question.php/?personId=$personId?questionId=$id\" class=\"btn btn-primary\">Answer Qestion</a>
         ?>
 
 
