@@ -32,23 +32,26 @@
             $users->execute();
             while ($URow = $users->fetch(PDO::FETCH_ASSOC))
             {
-            $username = $URow['username'];
+                $username = $URow['username'];
+            }
+            $questions = $db->prepare("SELECT question FROM questions WHERE ID = $question");
+            $users->execute();
+            while ($QRow = $users->fetch(PDO::FETCH_ASSOC))
+            {
+                $question = $QRow['question'];
             }
 
 
-
-            echo "<form action=\"question.php\" method=\"POST\">
+            echo "
                     <div class=\"card\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\"> Question from: $username - $date  </h5>
-                            <p class=\"card-text\"> $question </p>
-                            <a href=\"../question.php/?personId=$personId?questionId=$id\" class=\"btn btn-primary\">Answer Qestion</a>
+                            <p class=\"card-text\"> $answer </p>
                         </div>
-                    </div>
-                </form>";
+                    </div>";
         }
     ?>
-    <form action="addQuestion.php" method="POST">
+    <form action="addAnswer.php" method="POST">
         <div class="card w-100">
             <div class="card-body">
             <textarea class="form-control" aria-label="With textarea" name="question"></textarea>
