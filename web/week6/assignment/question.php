@@ -70,17 +70,21 @@
                         </div>
                     </div>";
         }
-    ?>
-    <form action="postAnswer.php" method="POST">
-        <div class="card w-100">
-            <div class="card-body">
-            <textarea class="form-control" aria-label="With textarea" name="question"></textarea>
-            <input type="hidden" name="userId" value="<?php $userId ?>">
-            <input type="hidden" name="questionId" value="<?php $id ?>">
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+        echo "<form action=\"postAnswer.php\" method=\"POST\">
+        <div class=\"card w-100\">
+            <div class=\"card-body\">
+            <textarea class=\"form-control\" aria-label=\"With textarea\" name=\"question\"></textarea>
+            <input type=\"hidden\" name=\"userId\" value=\" $userId \">
+            <input type=\"hidden\" name=\"questionId\" value=\" $id \">
+            <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
             </div>
         </div>
-    </form>
+    </form>";
+    ?>
+    
         <script src="" async defer></script>
     </body>
 </html>
