@@ -13,7 +13,7 @@
         
         $questionId = $_POST['questionId'];
         $personId = $_POST['userId']; 
-        
+        echo"questionid:$questionId  personid:$personId ";
 
         $statement2 = $db->prepare("SELECT * FROM questions WHERE ID = $questionId");
         $statement2->execute();
