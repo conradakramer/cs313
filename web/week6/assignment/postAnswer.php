@@ -36,7 +36,9 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: question.php?personId=$personId?questionId=$question_id");
+$p = $personId;
+$q = $question_id;
+header("Location: question.php/?personId=$p?questionId=$q");
 
 die(); 
 ?>
