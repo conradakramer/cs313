@@ -38,6 +38,8 @@ catch (Exception $ex)
 }
 $p = $personId;
 $q = $question_id;
+$p = str_replace(" ", "", $p);
+$q = str_replace(" ", "", $q);
 header("Location: question.php/?userId=$p?questionId=$q");
 
 die(); 
