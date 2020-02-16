@@ -15,7 +15,6 @@
         $personId = $_POST['userId']; 
         
 
-
         $statement2 = $db->prepare("SELECT * FROM questions WHERE ID = $questionId");
         $statement2->execute();
         while($row = $statement2->fetch(PDO::FETCH_ASSOC))
