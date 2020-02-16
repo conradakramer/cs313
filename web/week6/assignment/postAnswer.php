@@ -38,7 +38,7 @@ catch (Exception $ex)
 }
 $p = $personId;
 $q = $question_id;
-header("Location: question.php/?personId=$p?questionId=$q");
+header("Location: question.php/?userId=$p?questionId=$q");
 
 die(); 
 ?>
