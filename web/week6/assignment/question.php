@@ -61,6 +61,7 @@
             {
                 $username = $URow['username'];
             }
+            if ($id == $questionId){
             echo "
                     <div class=\"card\">
                         <div class=\"card-body\">
@@ -68,6 +69,7 @@
                             <p class=\"card-text\"> $answer </p>
                         </div>
                     </div>";
+            }
         }
 
 
