@@ -11,6 +11,7 @@
     <?php
 
         $personId = $_GET['personId'];
+        $_SESSION['personId'] = $personId;
         $statement = $db->prepare('SELECT * FROM person WHERE Id = :personId');
         $statement->bindValue(':personId', $personId);
         $statement->execute();
@@ -21,7 +22,7 @@
         $user    = $row['username'];
         $tempuser = $user;
         echo "<h1> Welcome Back $user </h1>";
-        $_SESSION['personId'] = $id;
+        
         }
         // execute another query to get food data
         // display name and favorite food
