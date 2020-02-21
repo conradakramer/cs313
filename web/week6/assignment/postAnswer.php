@@ -43,7 +43,7 @@ $q = str_replace(" ", "", $q);
 $p = (int)$p;
 $q = (int)$q;
 
-header("Location: question.php/?userId=$pquestionId=$q");
+header("Location: question.php/?questionId=$q");
 
 die(); 
 ?>
