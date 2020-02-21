@@ -43,7 +43,7 @@
                     </div>
                 </form>";
         }
-        $statement = $db->prepare("SELECT * FROM answer ");
+        $statement = $db->prepare("SELECT * FROM answer WHERE question_id = $questionId ");
         //echo"<H1>Question: </H1>";
         
         $statement->execute();

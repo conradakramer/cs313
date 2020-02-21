@@ -11,6 +11,15 @@ echo "userid: $personId and user: $user";
 
 
 
+
+
+
+
+/*id SERIAL NOT NULL PRIMARY KEY,
+user_id INT NOT NULL REFERENCES person(id),
+question VARCHAR(2000) NOT NULL,
+added DATE NOT NULL*/
+
 try
 {
 	$query = 'INSERT INTO questions (user_id, question, added) VALUES (:personId, :question, :qdate)';
