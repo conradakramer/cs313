@@ -76,7 +76,7 @@
                             <p class=\"card-text\" name=\"question\"> $question </p>
                             <input type=\"hidden\" name=\"userId\" value=\"$userId\">
                             <input type=\"hidden\" name=\"questionId\" value=\"$id\">
-                            <button type=\"submit\" class=\"btn btn-primary\">Answer Qestion</button>
+                            <button type=\"submit\" class=\"btn btn-primary\">Answer Qestion id:$id</button>
                         </div>
                     </div>
                 </form>";
