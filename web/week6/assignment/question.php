@@ -11,7 +11,7 @@
     <?php
         $questionId = $_POST['questionId'];
         $personId = $_POST['userId']; 
-        if ($personId === ''){
+        if ($personId == ''){
             $questionId = $_GET['questionId'];
             $personId = $_GET['userId'];
         }
