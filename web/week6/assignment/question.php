@@ -69,13 +69,13 @@
         }
 
 
-        echo"userid:$userId questionid:$id  personid:$personId ";
+        //echo"userid:$userId questionid:$id  personid:$personId ";
         echo "<form action=\"postAnswer.php\" method=\"POST\">
         <div class=\"card w-100\">
             <div class=\"card-body\">
             <textarea class=\"form-control\" aria-label=\"With textarea\" name=\"question\"></textarea>
             <input type=\"hidden\" name=\"userId\" value=\" $userId \">
-            <input type=\"hidden\" name=\"questionId\" value=\" $id \">
+            <input type=\"hidden\" name=\"questionId\" value=\" $questionId \">
             <input type=\"hidden\" name=\"personId\" value=\" $personId \">
             <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
             </div>
