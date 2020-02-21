@@ -10,7 +10,8 @@
 
     <?php
         $questionId = $_POST['questionId'];
-        $personId = $_POST['userId']; 
+        $personId = $_SESSION['personId'];
+        //$personId = $_POST['userId']; 
         if ($personId == ''){
             $questionId = $_GET['questionId'];
             $personId = $_GET['userId'];
