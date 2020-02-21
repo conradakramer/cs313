@@ -9,8 +9,6 @@
 
 
     <?php
-
-        
         $questionId = $_POST['questionId'];
         $personId = $_POST['userId']; 
         echo"questionid:$questionId  personid:$personId ";
@@ -38,7 +36,7 @@
                     <div class=\"card\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\"> Question from: $username - $date  </h5>
-                            <p class=\"card-text\" name=\"question\"> $question </p>
+                            <h1 class=\"card-text\" name=\"question\"> $question </h1>
                         </div>
                     </div>
                 </form>";
@@ -61,7 +59,6 @@
             {
                 $username = $URow['username'];
             }
-            if ($id == $questionId){
             echo "
                     <div class=\"card\">
                         <div class=\"card-body\">
@@ -69,7 +66,6 @@
                             <p class=\"card-text\"> $answer </p>
                         </div>
                     </div>";
-            }
         }
 
 
