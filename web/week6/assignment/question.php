@@ -11,6 +11,12 @@
     <?php
         $questionId = $_POST['questionId'];
         $personId = $_POST['userId']; 
+        if ($personId === ''){
+            $questionId = $_GET['questionId'];
+            $personId = $_GET['userId'];
+        }
+
+            
         echo"questionid:$questionId  personid:$personId ";
 
         $statement2 = $db->prepare("SELECT * FROM questions WHERE ID = $questionId");
