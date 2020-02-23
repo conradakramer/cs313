@@ -7,7 +7,7 @@
 	    $db = get_db();
     ?>
     <style>
-    .bg-purple { background-color: black; }
+    .bg-purple { background-color: darkgrey; }
     </style>
     <body>
     <nav class="navbar navbar-dark bg-dark">
