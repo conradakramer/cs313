@@ -73,8 +73,8 @@
             echo "<form action=\"../question.php\" method=\"POST\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            <h5 class=\"card-title\"> Question from: $username - $date  </h5>
-                            <p class=\"card-text\" name=\"question\"> $question </p>
+                            <h5 class=\"card-title\">$username - $date  </h5>
+                            <p class=\"lead\" name=\"question\"> $question </p>
                             <input type=\"hidden\" name=\"userId\" value=\"$userId\">
                             <input type=\"hidden\" name=\"questionId\" value=\"$id\">
                             <button type=\"submit\" class=\"btn btn-primary\">Answer Qestion id:$id</button>
@@ -90,7 +90,13 @@
 
 
 
-
+<div class="container">
+  <div class="jumbotron mt-3">
+    <h1>Bottom Navbar example</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the bottom navbar works.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/4.4/components/navbar/" role="button">View navbar docs »</a>
+  </div>
+</div>
         <script src="" async defer></script>
     </body>
 </html>
