@@ -89,7 +89,7 @@
 
 
 
-            echo "<form action=\"question.php\" method=\"POST\">
+            echo "<form action=\"../question.php\" method=\"POST\">
                     <div class=\"card bg-light mb-3\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">$username - $date  </h5>
