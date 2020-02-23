@@ -47,7 +47,7 @@
 
 
             echo "<form action=\"../question.php\" method=\"POST\">
-                    <div class=\"card\">
+                    <div class=\"card bg-light mb-3\">
                         <div class=\"card-body\">
                             <h1 class=\"card-text\" name=\"question\"> $question </h1>
                             <h5 class=\"card-title\"> $username - $date  </h5>
@@ -74,7 +74,7 @@
                 $username = $URow['username'];
             }
             echo "
-                    <div class=\"card\">
+                    <div class=\"card bg-light mb-3\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\"> $username   </h5>
                             <p class=\"card-text\"> $answer </p>
