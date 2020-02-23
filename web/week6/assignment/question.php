@@ -8,7 +8,12 @@
 	    $db = get_db();
     ?>
     <body>
-
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+        <img src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Awk-Word
+        </a>
+    </nav>
 
 
     <?php
@@ -20,7 +25,7 @@
         }
 
             
-        echo"questionid:$questionId  personid:$personId ";
+        //echo"questionid:$questionId  personid:$personId ";
 
         $statement2 = $db->prepare("SELECT * FROM questions WHERE ID = $questionId");
         $statement2->execute();
@@ -44,8 +49,8 @@
             echo "<form action=\"../question.php\" method=\"POST\">
                     <div class=\"card\">
                         <div class=\"card-body\">
-                            <h5 class=\"card-title\"> Question from: $username - $date  </h5>
                             <h1 class=\"card-text\" name=\"question\"> $question </h1>
+                            <h5 class=\"card-title\"> $username - $date  </h5>
                         </div>
                     </div>
                 </form>";
@@ -80,18 +85,18 @@
 
         //echo"userid:$userId questionid:$id  personid:$personId ";
         echo "<form action=\"postAnswer.php\" method=\"POST\">
-        <div class=\"card w-100\">
-            <div class=\"card-body\">
+        <div class=\"input-group\">
             <textarea class=\"form-control\" aria-label=\"With textarea\" name=\"question\"></textarea>
-            <input type=\"hidden\" name=\"userId\" value=\" $userId \">
-            <input type=\"hidden\" name=\"questionId\" value=\" $questionId \">
-            <input type=\"hidden\" name=\"personId\" value=\" $personId \">
-            <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
+            <div class=\"input-group-prepend\">
+                <input type=\"hidden\" name=\"userId\" value=\" $userId \">
+                <input type=\"hidden\" name=\"questionId\" value=\" $questionId \">
+                <input type=\"hidden\" name=\"personId\" value=\" $personId \">
+                <span class=\"input-group-text\"><button type=\"submit\" class=\"btn btn-primary\">Submit</button></span>
             </div>
-        </div>
+            </div>
     </form>";
     ?>
-    
+ 
         <script src="" async defer></script>
     </body>
 </html>
