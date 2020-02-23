@@ -15,9 +15,7 @@
         <img src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
         Awk-Word
         </a>
-        <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="home.php">Home <span class="sr-only"></span></a>
-    </div>
+
     </nav>
     <div class="container">
 
