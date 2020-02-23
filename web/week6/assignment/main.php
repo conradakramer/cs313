@@ -89,7 +89,7 @@ body {
     <img class="mb-4" src="https://www.festivalclaca.cat/pics/b/12/129521_awkward-emoji-png.jpg" alt="" width="85" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Dont Be Awk-Word and sign in</h1>
   <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" id="username" class="form-control" placeholder="username" name="username" required="" autofocus="">
+  <input type="text" id="username" class="form-control" placeholder="username" name="username" required="" autofocus="">
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="password" class="form-control" placeholder="Password" name="password" required="">
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
