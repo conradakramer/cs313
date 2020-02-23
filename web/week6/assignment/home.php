@@ -19,6 +19,7 @@
         </a>
     </nav>
     <div class="container">
+
     <?php
 
         $personId = $_GET['personId'];
@@ -32,7 +33,12 @@
         $id      = $row['id'];
         $user    = $row['username'];
         $tempuser = $user;
-        echo "<h1> Welcome Back $user </h1>";
+        echo "    <div class=\"d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm\">
+        <img class=\"mr-3\" src=\"https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg\" alt=\"\" width=\"48\" height=\"48\">
+        <div class=\"lh-100\">
+          <h6 class=\"mb-0 text-white lh-100\">$user</h6>
+        </div>
+      </div>";
         
         }
         // execute another query to get food data
@@ -42,13 +48,14 @@
          
         <form action="../addQuestion.php" method="POST">
             <div class="input-group">
+                
+                <textarea class="form-control" aria-label="With textarea" name="question"></textarea>
                 <div class="input-group-prepend">
                     <input type="hidden" name="personId" value="<?php $personId ?>"/>  
-                    <span class="input-group-text">New Question:</span>
+                    <span class="input-group-text"><button type="submit" class="btn btn-secondary btn-sm" >Ask Question!</button></span>
                 </div>
-                <textarea class="form-control" aria-label="With textarea" name="question"></textarea>
             </div>
-            <button type="submit" class="btn btn-secondary btn-sm" >Ask Question!</button>
+            
         </form>
          
 
