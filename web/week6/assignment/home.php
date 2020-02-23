@@ -6,6 +6,11 @@
 	    require("dbConnect.php");
 	    $db = get_db();
     ?>
+    <style>
+    .card{
+        padding: 20px;
+    }
+    </style>
     <body>
     <div class="container">
     <?php
