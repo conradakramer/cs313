@@ -20,7 +20,7 @@
 
 
     <?php
-        $questionId = $_POST['questionId'];
+        //$questionId = $_POST['questionId'];
         $personId = $_SESSION['personId'];
         //$personId = $_POST['userId']; 
         if ($questionId == ''){
