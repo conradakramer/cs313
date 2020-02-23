@@ -8,7 +8,7 @@
 	    $db = get_db();
     ?>
     <body>
-        
+        <h1>Awk-Word</h1>
     <form action="register.php" method="POST">
         <div class="form-group" >
             <label for="exampleInputEmail1">Username</label>
