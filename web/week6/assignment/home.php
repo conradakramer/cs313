@@ -12,9 +12,9 @@
     }
     </style>
     <body>
-    <nav class="navbar navbar-light bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-        <img src="https://www.festivalclaca.cat/pics/b/12/129521_awkward-emoji-png.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
         Awk-Word
         </a>
     </nav>
