@@ -12,6 +12,12 @@
     }
     </style>
     <body>
+    <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-brand" href="#">
+        <img src="https://www.festivalclaca.cat/pics/b/12/129521_awkward-emoji-png.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Awk-Word
+        </a>
+    </nav>
     <div class="container">
     <?php
 
@@ -82,7 +88,7 @@
                             <p class=\"lead\" name=\"question\"> $question </p>
                             <input type=\"hidden\" name=\"userId\" value=\"$userId\">
                             <input type=\"hidden\" name=\"questionId\" value=\"$id\">
-                            <button type=\"submit\" class=\"btn btn-primary\">Answer Qestion id:$id</button>
+                            <button type=\"submit\" class=\"btn btn-primary\">Answer Qestion</button>
                         </div>
                     </div>
                 </form>";
