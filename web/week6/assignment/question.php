@@ -14,7 +14,7 @@
         Awk-Word
         </a>
         <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="../home.php">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="home.php">Home <span class="sr-only"></span></a>
     </div>
     </nav>
 
