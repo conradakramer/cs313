@@ -86,7 +86,7 @@ body {
       </head>
     <body class="text-center">
     <form action="register.php" method="POST"class="form-signin">
-    <h1 class="h3 mb-3 font-weight-normal">Awk-Word</h1>
+    <img class="mb-4" src="https://www.festivalclaca.cat/pics/b/12/129521_awkward-emoji-png.jpg" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <label for="inputEmail" class="sr-only">Email address</label>
   <input type="email" id="username" class="form-control" placeholder="username" name="username" required="" autofocus="">
