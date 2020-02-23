@@ -8,21 +8,21 @@
 	    $db = get_db();
     ?>
     <body>
-        <h1>Awk-Word</h1>
-    <form action="register.php" method="POST">
-        <div class="form-group" >
-            <label for="exampleInputEmail1">Username</label>
-            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password" name="password">
-        </div>
-            <div class="form-group form-check">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+    <form action="register.php" method="POST"class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Awk-Word</h1>
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="username" class="form-control" placeholder="username" name="username" required="" autofocus="">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="password" class="form-control" placeholder="Password" name="password" required="">
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted">© 2020</p>
     </form>
 
         <script src="" async defer></script>
     </body>
 </html>
+
+
+
+
