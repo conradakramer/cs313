@@ -7,7 +7,7 @@
 	    require_once("dbConnect.php");
 	    $db = get_db();
     ?>
-    <body>
+    <body class="text-center">
     <form action="register.php" method="POST"class="form-signin">
     <h1 class="h3 mb-3 font-weight-normal">Awk-Word</h1>
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
