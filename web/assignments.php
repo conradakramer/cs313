@@ -21,7 +21,7 @@
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week2/assignment/about.html'">Week 02 - About Me</button>
+        <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week2/assignment/assign02.html'">Week 02 - About Me</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
