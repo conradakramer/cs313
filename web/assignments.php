@@ -16,7 +16,7 @@
     <H1>Assignments</H1>
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='assignments.php'">Week 01 - Hello World</button>
+        <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='week1/hello.html'">Week 01 - Hello World</button>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
