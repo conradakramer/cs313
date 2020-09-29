@@ -23,9 +23,9 @@
 
 
       <?php 
-      if(isset($_POST['Submit'])){
-         $_SESSION['pictureUrl'] = $_POST
-      }
+      // if(isset($_POST['Submit'])){
+      //    $_SESSION['pictureUrl'] = $_POST
+      // }
       ?>
    </body>
 </html>
