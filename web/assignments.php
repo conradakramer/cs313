@@ -32,12 +32,12 @@
               <button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='week3/team/teamActivity1.php'">Week 03 - Team Activity</button>
             </div>
           </div>
-          <!-- <div class="card mb-4 shadow-sm">
+          <div class="card mb-4 shadow-sm">
       <div class="card-body">
         <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week3/assignment/browse.php'">Week 03 - Shoping</button>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+    <!-- <div class="card mb-4 shadow-sm">
       <div class="card-body">
         <button type="button" class="btn btn-lg btn-block btn-primary"onclick="location.href='week4/assignment/browse.php'">Week 04 - n/a</button>
       </div>

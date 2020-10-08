@@ -37,7 +37,7 @@
 ?>
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>Get UR Stuff N Get Out</h1>
-  <p>We love your support please feel free to invite your friends to shope here too!</p> 
+  <p>We love your support please feel free to invite your friends to shop here too!</p> 
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -60,51 +60,51 @@
 <div class="container" style="margin-top:30px">
   <div class="row">
   <div class="card" id="card1">
-    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://picsum.photos/seed/1/300/300" alt="Card image" style="width:100%">
     <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item1"value=200>$200</a>
+      <h4 class="card-title">Thing 1</h4>
+      <p class="card-text">Thing 1 is something that can help you a little</p>
+      <a href="#" class="btn btn-primary"id="item1"value=200>Add to cart - $200</a>
   </div>
 </div>
 <div class="card" id="card2">
-    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://picsum.photos/seed/2/300/300" alt="Card image" style="width:100%">
     <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item2" value=300>$300</a>
+      <h4 class="card-title">Thing 2</h4>
+      <p class="card-text">Thing 2 is something that can help you somewhat</p>
+      <a href="#" class="btn btn-primary"id="item2" value=300>Add to cart - $300</a>
   </div>
 </div>
 <div class="card" id="card3">
-    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://picsum.photos/seed/3/300/300" alt="Card image" style="width:100%">
     <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item3" value=400>$400</a>
+      <h4 class="card-title">Thing 3</h4>
+      <p class="card-text">Thing 3 is something that can help you a little more</p>
+      <a href="#" class="btn btn-primary"id="item3" value=400>Add to cart - $400</a>
   </div>
 </div>
 <div class="card" id="card4">
-    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://picsum.photos/seed/4/300/300" alt="Card image" style="width:100%">
     <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item4" value=500>$500</a>
+      <h4 class="card-title">Thing 4</h4>
+      <p class="card-text">Thing 4 is something that can help you a somemore</p>
+      <a href="#" class="btn btn-primary"id="item4" value=500>Add to cart - $500</a>
   </div>
 </div>
 <div class="card" id="card5">
-    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://picsum.photos/seed/5/300/300" alt="Card image" style="width:100%">
     <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary"id="item5" value=600>$600</a>
+      <h4 class="card-title">Thing 5</h4>
+      <p class="card-text">Thing 5 is something that can help you quite a bit</p>
+      <a href="#" class="btn btn-primary"id="item5" value=600>Add to cart - $600</a>
   </div>
 </div>
 <div class="card" id="card6">
-    <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="https://picsum.photos/seed/6/300/300" alt="Card image" style="width:100%">
     <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary" id="item6" value=700>$700</a>
+      <h4 class="card-title">Thing 6</h4>
+      <p class="card-text">Thing 6 is something that can help you a lot</p>
+      <a href="#" class="btn btn-primary" id="item6" value=700>Add to cart - $700</a>
   </div>
 </div>
   </div>
