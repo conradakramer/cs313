@@ -5,7 +5,7 @@ $user = "gtzdzarqmlvbsn";
 $pass = "3d6f747b67fb6b0b6e81955555816ba5018945ff8ae36145810a83d437bb1102"; 
 $db = "d3psci9ggadgm5"; 
 
-$con = pg_connect("host=$host dbname=$db user=$user password=$pass")
+$con = pg_connect("host=$host dbname=$db user=$user password=$pass sslmode=require")
     or die ("Could not connect to server\n"); 
 
 $query = "SELECT * FROM notes"; 
