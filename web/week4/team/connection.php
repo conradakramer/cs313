@@ -18,5 +18,4 @@ while ($row = pg_fetch_assoc($rs)) {
 }
 
 pg_close($con);
-
 ?>
