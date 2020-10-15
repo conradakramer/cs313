@@ -18,29 +18,18 @@ try {
     <title>Scriptures</title>
 </head>
 <body>
-<table>
-    <tr>
+    <main>
+        <section>
+            <h2>Scriptures Resources</h2>
 <?php
 foreach ($connect->query($sql) as $row) 
 {
-    $result = "";
-    $result .= "";
-    $result .= "";
-    $result .= "";
-    $result .= "";
-    $result .= "";
-    $result .= "";
-    $result .= "";
-    $result .= "";
+    $result = "<p><strong>".$row['book']. " " .$row['chapter'] . ":" .$row['verse'] . "</strong>";
+    $result = " - " .$row['verse_content']. " </p>";
     echo $result;    
-    
-print $row['id'] . " ";
-print $row['book'] . "-->";
 }
 ?>
-</tr>
-
-</table>
-    
+    </section>
+</main>
 </body>
 </html>

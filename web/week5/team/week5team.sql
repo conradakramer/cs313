@@ -4,7 +4,7 @@ CREATE TABLE scriptures (
     book VARCHAR(50) NOT NULL,
     chapter INT NOT NULL,
     verse INT NOT NULL,
-    content TEXT(500),
+    verse_content TEXT NOT NULL
 );
 INSERT INTO scriptures(id, book, chapter, verse, content) 
 VALUES(1,"John", 1,5,"And the alight shineth in bdarkness; and the darkness ccomprehended it not.");
