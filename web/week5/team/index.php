@@ -7,7 +7,7 @@ try {
   echo "Error : " . $e->getMessage() . "<br/>";
   }
 
-  $sql = 'SELECT * FROM scriptures;';
+  $sql = 'SELECT * FROM scriptures.scriptures;';
 
 ?>
 <!DOCTYPE html>
