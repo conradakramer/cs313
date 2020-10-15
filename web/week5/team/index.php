@@ -24,8 +24,8 @@ try {
 <?php
 foreach ($connect->query($sql) as $row) 
 {
-    $result = "<p><strong>".$row['book']. " " .$row['chapter'] . ":" .$row['verse'] . "</strong>";
-    $result = " - " .$row['verse_content']. " </p>";
+    $result = "<p><strong>".$row['book']. " " .$row['chapter']. ":" .$row['verse']. "</strong>";
+    $result .= " - " .$row['verse_content']. " </p>";
     echo $result;    
 }
 ?>
