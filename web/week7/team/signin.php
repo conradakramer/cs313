@@ -12,11 +12,11 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 
 	// Connect to the DB
 	require("connection.php");
-	$db = get_db();
+	//$db = get_db();
 
 	$query = 'SELECT password FROM login WHERE username=:username';
 
-	$statement = $db->prepare($query);
+	$statement = $connect->prepare($query);
 	$statement->bindValue(':username', $username);
 
 	$result = $statement->execute();
