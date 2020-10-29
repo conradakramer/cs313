@@ -11,7 +11,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$password = $_POST['txtPassword'];
 
 	// Connect to the DB
-	require("dbConnect.php");
+	require("connection.php");
 	$db = get_db();
 
 	$query = 'SELECT password FROM login WHERE username=:username';
@@ -43,12 +43,7 @@ else
     $badLogin = true;
 }
 }
-/* if ($username != $dbData['username']) {
-    $message = "Please check your username";
-    header("Location: signin.php");
-    die();
 
-} */
 
 
 ?>
