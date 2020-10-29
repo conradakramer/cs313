@@ -19,7 +19,8 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$statement = $connect->prepare($query);
 	$statement->bindValue(':username', $username);
 
-	$result = $statement->execute();
+    $result = $statement->execute();
+    error_log("getting result-------"+ $result);
 if ($result){
     $row = $statement->fetch();
     $hashedPasswordFromDB = $row['pass'];
