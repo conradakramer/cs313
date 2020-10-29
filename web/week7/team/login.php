@@ -20,7 +20,7 @@ function dbData($username)
 $dbData = dbData($username);
 if ($dbData){
     $row = $statement->fetch();
-    $hashedPasswordFromDB = $row['password'];
+    $hashedPasswordFromDB = $row['pass'];
 
     // now check to see if the hashed password matches
     if (password_verify($password, $hashedPasswordFromDB))
