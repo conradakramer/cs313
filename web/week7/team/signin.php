@@ -2,13 +2,6 @@
 
 session_start();
 
-if ($_SESSION['logged']) {
-    header('Location: home.php');
-}
-
-
-session_start();
-
 $badLogin = false;
 
 if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
