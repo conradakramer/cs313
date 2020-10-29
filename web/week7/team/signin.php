@@ -7,6 +7,56 @@ if ($_SESSION['logged']) {
 }
 
 
+session_start();
+
+$badLogin = false;
+
+if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
+{
+	// they have submitted a username and password for us to check
+	$username = $_POST['txtUser'];
+	$password = $_POST['txtPassword'];
+
+	// Connect to the DB
+	require("dbConnect.php");
+	$db = get_db();
+
+	$query = 'SELECT password FROM login WHERE username=:username';
+
+	$statement = $db->prepare($query);
+	$statement->bindValue(':username', $username);
+
+	$result = $statement->execute();
+if ($dbData){
+    $row = $statement->fetch();
+    $hashedPasswordFromDB = $row['pass'];
+
+    // now check to see if the hashed password matches
+    if (password_verify($password, $hashedPasswordFromDB))
+    {
+        // password was correct, put the user on the session, and redirect to home
+        $_SESSION['username'] = $username;
+        header("Location: home.php");
+        die(); // we always include a die after redirects.
+    }
+    else
+    {
+        $badLogin = true;
+    }
+
+}
+else
+{
+    $badLogin = true;
+}
+}
+/* if ($username != $dbData['username']) {
+    $message = "Please check your username";
+    header("Location: signin.php");
+    die();
+
+} */
+
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +77,7 @@ if ($_SESSION['logged']) {
 <body>
     <div class="card mb-3" style="width: rem;">
         <div class="login-form">
-            <form action="login.php" method="post">
+            <form action="signin.php" method="POST">
                 <h2 class="text-center">Log in</h2>
                 <div class="form-group">
                     <input type="text" name="username" class="form-control" placeholder="Username" required="required">
@@ -35,6 +85,12 @@ if ($_SESSION['logged']) {
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Password" required="required">
                 </div>
+                    <?php
+                    if ($badLogin)
+                    {
+                        echo "Incorrect username or password!<br /><br />\n";
+                    }
+                    ?>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Log in</button>
                 </div>

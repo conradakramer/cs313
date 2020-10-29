@@ -14,6 +14,6 @@ if (isset($_SESSION['username'])) {
     <title>Welcome, <?php echo $username ?></title>
 </head>
 <body>
-    
+    <h1>Welcome, <?php echo $username ?></h1>
 </body>
 </html>
