@@ -74,7 +74,13 @@ else
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body>   
+    <?php
+                    if ($badLogin)
+                    {
+                        echo "Incorrect username or password!<br /><br />\n";
+                    }
+                    ?>
     <div class="card mb-3" style="width: rem;">
         <div class="login-form">
             <form action="signin.php" method="POST">
@@ -85,12 +91,7 @@ else
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Password" required="required">
                 </div>
-                    <?php
-                    if ($badLogin)
-                    {
-                        echo "Incorrect username or password!<br /><br />\n";
-                    }
-                    ?>
+                 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Log in</button>
                 </div>
