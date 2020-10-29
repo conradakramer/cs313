@@ -13,19 +13,17 @@ function dbData($username)
     $query = 'SELECT * FROM users WHERE username = :username';
     $statement = $connect->prepare($query);
     $statement->bindValue(":username", $username);
-    $statement->execute();
-    $dbData = $statement->fetch(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    return $dbData;
+    $result = $statement->execute();
+    return $result;
 }
 $dbData = dbData($username);
 
-if ($username != $dbData['username']) {
+/* if ($username != $dbData['username']) {
     $message = "Please check your username";
     header("Location: signin.php");
     die();
 
-}
+} */
 
 $checkHash = password_verify($pass, $dbData['password']);
 
