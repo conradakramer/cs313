@@ -1,23 +1,24 @@
 <?php 
 session_start();
-$username = $_POST['username'];
-$pass = $_POST['password'];
+
 $badLogin = false;
 
-if (empty($username) || empty($password)) {
-    $message = "You must complete all the fields";
-}
-
-function dbData($username)
+if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 {
-    require('connection.php');
-    $query = 'SELECT * FROM users WHERE username = :username';
-    $statement = $connect->prepare($query);
-    $statement->bindValue(":username", $username);
-    $result = $statement->execute();
-    return $result;
-}
-$dbData = dbData($username);
+	// they have submitted a username and password for us to check
+	$username = $_POST['txtUser'];
+	$password = $_POST['txtPassword'];
+
+	// Connect to the DB
+	require("dbConnect.php");
+	$db = get_db();
+
+	$query = 'SELECT password FROM login WHERE username=:username';
+
+	$statement = $db->prepare($query);
+	$statement->bindValue(':username', $username);
+
+	$result = $statement->execute();
 if ($dbData){
     $row = $statement->fetch();
     $hashedPasswordFromDB = $row['pass'];
@@ -39,6 +40,7 @@ if ($dbData){
 else
 {
     $badLogin = true;
+}
 }
 /* if ($username != $dbData['username']) {
     $message = "Please check your username";
