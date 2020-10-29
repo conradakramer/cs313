@@ -17,7 +17,28 @@ function dbData($username)
     return $result;
 }
 $dbData = dbData($username);
-error_log($dbData);
+if ($dbData){
+    $row = $statement->fetch();
+    $hashedPasswordFromDB = $row['password'];
+
+    // now check to see if the hashed password matches
+    if (password_verify($password, $hashedPasswordFromDB))
+    {
+        // password was correct, put the user on the session, and redirect to home
+        $_SESSION['username'] = $username;
+        header("Location: home.php");
+        die(); // we always include a die after redirects.
+    }
+    else
+    {
+        $badLogin = true;
+    }
+
+}
+else
+{
+    $badLogin = true;
+}
 /* if ($username != $dbData['username']) {
     $message = "Please check your username";
     header("Location: signin.php");
