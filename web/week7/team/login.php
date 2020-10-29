@@ -11,7 +11,7 @@ function dbData()
 {
     require('connection.php');
     $query = 'SELECT * FROM users';
-    $statement = $link->prepare($query);
+    $statement = $connect->prepare($query);
     $statement->execute();
     $dbData = $statement->fetch(PDO::FETCH_ASSOC);
     $statement->closeCursor();
