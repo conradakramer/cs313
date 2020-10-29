@@ -20,7 +20,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$statement->bindValue(':username', $username);
 
 	$result = $statement->execute();
-if ($dbData){
+if ($result){
     $row = $statement->fetch();
     $hashedPasswordFromDB = $row['pass'];
 
