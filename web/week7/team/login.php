@@ -17,7 +17,7 @@ function dbData($username)
     return $result;
 }
 $dbData = dbData($username);
-
+error_log($dbData);
 /* if ($username != $dbData['username']) {
     $message = "Please check your username";
     header("Location: signin.php");
