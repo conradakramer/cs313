@@ -23,8 +23,8 @@ $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 require("connection.php");
 $query = 'INSERT INTO "login" (username, pass) VALUES(:username, :pass)';
 $stmt = $connect->prepare($query);
-$stmt->bindValue(":username", $username, PDO::PARAM_STR);
-$stmt->bindValue(":pass", $hashedPass, PDO::PARAM_STR);
+$stmt->bindValue(":username", $username);
+$stmt->bindValue(":pass", $hashedPass);
 $stmt->execute();
 
 header("Location: signin.php");
