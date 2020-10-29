@@ -39,6 +39,7 @@ if ($_SESSION['logged']) {
     header('Location: home.php');
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
