@@ -22,12 +22,18 @@ $dbData = dbData($username);
 
 if ($username != $dbData['username']) {
     $message = "Please check your username";
+    header("Location: signin.php");
+    die();
+
 }
 
 $checkHash = password_verify($pass, $dbData['password']);
 
 if (!$checkHash) {
     $message = "Please check your password";
+    header("Location: signin.php");
+    die();
+
 }
 
 $_SESSION['logged'] = TRUE;
