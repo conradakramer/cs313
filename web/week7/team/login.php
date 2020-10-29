@@ -24,7 +24,7 @@ if ($username != $dbData['username']) {
     $message = "Please check your username";
 }
 
-$checkHash = password_verify($password, $dbData['password']);
+$checkHash = password_verify($pass, $dbData['password']);
 
 if (!$checkHash) {
     $message = "Please check your password";
