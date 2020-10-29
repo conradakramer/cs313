@@ -2,6 +2,7 @@
 session_start();
 $username = $_POST['username'];
 $pass = $_POST['password'];
+$badLogin = false;
 
 if (empty($username) || empty($password)) {
     $message = "You must complete all the fields";
@@ -45,17 +46,4 @@ else
     die();
 
 } */
-
-$checkHash = password_verify($pass, $dbData['password']);
-
-if (!$checkHash) {
-    $message = "Please check your password";
-    header("Location: signin.php");
-    die();
-
-}
-
-$_SESSION['logged'] = TRUE;
-array_pop($dbData);
-$_SESSION['dbData'] = $dbData;
 ?>
