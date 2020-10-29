@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['logged'])) {
-    $username = $_SESSION['userData']['username'];
+    $username = $_SESSION['dbData']['username'];
 }
 
 ?> 

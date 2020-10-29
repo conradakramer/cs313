@@ -7,17 +7,18 @@ if (empty($username) || empty($password)) {
     $message = "You must complete all the fields";
 }
 
-function dbData()
+function dbData($username)
 {
     require('connection.php');
-    $query = 'SELECT * FROM users';
+    $query = 'SELECT * FROM users WHERE username = :username';
     $statement = $connect->prepare($query);
+    $statement->bindValue(":username", $username);
     $statement->execute();
     $dbData = $statement->fetch(PDO::FETCH_ASSOC);
     $statement->closeCursor();
     return $dbData;
 }
-$dbData = dbData();
+$dbData = dbData($username);
 
 if ($username != $dbData['username']) {
     $message = "Please check your username";
