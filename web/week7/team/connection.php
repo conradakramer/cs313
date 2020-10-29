@@ -10,6 +10,7 @@
     $link = new PDO($connection, $username, $password, $options);
     return $link;
   } catch (PDOException $e) {
-    include "500.php";
+    //include "500.php";
+    echo "Error";
     exit;
   }
