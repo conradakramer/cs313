@@ -81,7 +81,7 @@ else
                     <input type="text" name="username" class="form-control" placeholder="Username" required="required">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+                    <input type="password" name="pass" class="form-control" placeholder="Password" required="required">
                 </div>
                  
                 <div class="form-group">
