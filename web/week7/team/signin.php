@@ -4,11 +4,11 @@ session_start();
 
 $badLogin = false;
 
-if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
+if (isset($_POST['username']) && isset($_POST['pass']))
 {
 	// they have submitted a username and password for us to check
-	$username = $_POST['txtUser'];
-	$password = $_POST['txtPassword'];
+	$username = $_POST['username'];
+	$password = $_POST['pass'];
 
 	// Connect to the DB
 	require("connection.php");
@@ -20,7 +20,8 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$statement->bindValue(':username', $username);
 
     $result = $statement->execute();
-    error_log("getting result-------"+ $result);
+    error_log("getting result-------");
+    error_log($result);
 if ($result){
     $row = $statement->fetch();
     $hashedPasswordFromDB = $row['pass'];
@@ -36,12 +37,14 @@ if ($result){
     else
     {
         $badLogin = true;
+        error_log("bad Password");
     }
 
 }
 else
 {
     $badLogin = true;
+    error_log("bad Result");
 }
 }
 
