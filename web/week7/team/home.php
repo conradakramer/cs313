@@ -15,5 +15,6 @@ if (isset($_SESSION['username'])) {
 </head>
 <body>
     <h1>Welcome, <?php echo $username ?></h1>
+    <a href="signout.php">Logout</a>
 </body>
 </html>
