@@ -2,38 +2,6 @@
 
 session_start();
 
-$username = $_POST['username'];
-$pass = $_POST['password'];
-
-if (empty($username) || empty($password)) {
-    $message = "You must complete all the fields";
-}
-
-function dbData()
-{
-    require('connection.php');
-    $query = 'SELECT * FROM users';
-    $statement = $link->prepare($query);
-    $statement->execute();
-    $dbData = $statement->fetch(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    return $dbData;
-}
-$dbData = dbData();
-
-if ($username != $dbData['username']) {
-    $message = "Please check your username";
-}
-
-$checkHash = password_verify($password, $dbData['password']);
-
-if (!$checkHash) {
-    $message = "Please check your password";
-}
-
-$_SESSION['logged'] = TRUE;
-array_pop($dbData);
-$_SESSION['dbData'] = $dbData;
 if ($_SESSION['logged']) {
     header('Location: home.php');
 }
@@ -58,7 +26,7 @@ if ($_SESSION['logged']) {
 <body>
     <div class="card mb-3" style="width: rem;">
         <div class="login-form">
-            <form action="signin.php" method="post">
+            <form action="login.php" method="post">
                 <h2 class="text-center">Log in</h2>
                 <div class="form-group">
                     <input type="text" name="username" class="form-control" placeholder="Username" required="required">
