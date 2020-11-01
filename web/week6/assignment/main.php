@@ -20,16 +20,19 @@ if (isset($_POST['username']) && isset($_POST['pass']))
   $statement->bindValue(':username', $username);
 
     $result = $statement->execute();
-    error_log("getting result-------");
-    error_log($result);
 if ($result){
     $row = $statement->fetch();
     $hashedPasswordFromDB = $row['password'];
-    $personId = $row['id'];
-
+    
     // now check to see if the hashed password matches
     if (password_verify($password, $hashedPasswordFromDB))
     {
+      $query2 = 'SELECT id FROM person WHERE username=:username';
+      $statement2 = $connect->prepare($query2);
+      $statement2->bindValue(':username', $username);
+      $statement2->execute();
+      $row = $statement2->fetch();
+      $personId = $row['id'];
 
 
         // password was correct, put the user on the session, and redirect to home
