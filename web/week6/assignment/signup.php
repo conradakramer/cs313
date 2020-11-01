@@ -89,11 +89,11 @@
     <img class="mb-4" src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg" alt="" width="85" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Dont Be Awk-Word and sign up now</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="text" id="username" class="form-control" placeholder="username" name="username" autofocus="">
+    <input type="text" id="username" class="form-control" placeholder="Username" name="username" autofocus="">
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="password" class="form-control" placeholder="Password" name="pass" >
+    <input type="password" id="pass" class="form-control" placeholder="Password" name="pass" >
     <label for="inputPassword" class="sr-only">Confirm Password</label>
-    <input type="password" id="password" class="form-control" placeholder="Confirm Password" name="pass2" >
+    <input type="password" id="pass2" class="form-control" placeholder="Confirm Password" name="pass2" >
     <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button><br>
     <p class="message">Already registered? <a href="main.php">Sign In</a></p>
     <p class="mt-5 mb-3 text-muted">© 2020</p>

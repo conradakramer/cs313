@@ -27,7 +27,7 @@ $stmt->bindValue(":username", $username);
 $stmt->bindValue(":pass", $hashedPass);
 $stmt->execute();
 
-header("Location: signin.php");
+header("Location: main.php");
 die();
 
 function checkPassword($pass)
