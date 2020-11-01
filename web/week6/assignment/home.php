@@ -3,6 +3,7 @@ session_start();
 
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
+    error_log($_SESSION['username']);
 }
 if ($_SESSION['username'] == '') {
     header('Location:main.php');
@@ -28,7 +29,7 @@ require("connection.php");
             Awk-Word
         </a>
         <a class="navbar-brand" href="#">
-            Welcome  <?php $_SESSION['username']?>          
+            Welcome  <?php $username ?>          
         </a>
         <a href="signout.php">Logout</a>
     </nav>
