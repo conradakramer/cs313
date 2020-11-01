@@ -141,7 +141,7 @@ else
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="text" id="username" class="form-control" placeholder="username" name="username" autofocus="">
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="password" class="form-control" placeholder="Password" name="password" >
+    <input type="password" id="pass" class="form-control" placeholder="Password" name="pass" >
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     <p class="message">Not registered? <a href="signup.php">Create an account</a></p>
   </form>
