@@ -3,6 +3,7 @@ session_start();
 
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
+    $personId = $_SESSION['personId'];
     error_log($_SESSION['username']);
     error_log($_SESSION['personId']);
 }
@@ -38,8 +39,6 @@ require("connection.php");
 
         <?php
 
-        $personId = $_GET['personId'];
-        $_SESSION['personId'] = $personId;
         $statement = $connect->prepare('SELECT * FROM person WHERE Id = :personId');
         $statement->bindValue(':personId', $personId);
         $statement->execute();
