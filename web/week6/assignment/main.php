@@ -25,23 +25,18 @@ if (isset($_POST['username']) && isset($_POST['pass']))
 if ($result){
     $row = $statement->fetch();
     $hashedPasswordFromDB = $row['password'];
+    $personId = $row['id'];
 
     // now check to see if the hashed password matches
     if (password_verify($password, $hashedPasswordFromDB))
     {
-      $query2 = 'SELECT id FROM person WHERE username=:username';
-      $statement2 = $connect->prepare($query2);
-      $statement2->bindValue(':username', $username);
-      $result2 = $statement2->execute();
-
-
 
 
         // password was correct, put the user on the session, and redirect to home
         $_SESSION['username'] = $username;
         $_SESSION['personId'] = $result2;
         error_log("getting result2 ------------------------- ");
-        error_log($result2);
+        error_log($personId);
         header("Location: home.php");
         die(); // we always include a die after redirects.
     }
