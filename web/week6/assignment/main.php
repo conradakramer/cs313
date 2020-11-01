@@ -138,9 +138,9 @@ else
     <img class="mb-4" src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg" alt="" width="85" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Dont Be Awk-Word and sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="text" id="username" class="form-control" placeholder="username" name="username" required="" autofocus="">
+    <input type="text" id="username" class="form-control" placeholder="username" name="username" autofocus="">
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="password" class="form-control" placeholder="Password" name="password" required="">
+    <input type="password" id="password" class="form-control" placeholder="Password" name="password" >
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br>
     <a href="register.php"><button class="btn btn-lg btn-primary btn-block" type="register">Register</button></a>
     <p class="mt-5 mb-3 text-muted">© 2020</p>
