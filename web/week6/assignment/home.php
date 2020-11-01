@@ -29,7 +29,7 @@ require("connection.php");
             Awk-Word
         </a>
         <a class="navbar-brand" href="#">
-            Welcome  <?php $username ?>          
+            Welcome  <?php echo $username ?>          
         </a>
         <a href="signout.php">Logout</a>
     </nav>
