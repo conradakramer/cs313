@@ -37,7 +37,7 @@ if ($result){
 
         // password was correct, put the user on the session, and redirect to home
         $_SESSION['username'] = $username;
-        $_SESSION['personId'] = $result2;
+        $_SESSION['personId'] = $personId;
         error_log("getting result2 ------------------------- ");
         error_log($personId);
         header("Location: home.php");
