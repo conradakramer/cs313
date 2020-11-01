@@ -1,105 +1,151 @@
+<?php
 
-    
-    
+session_start();
 
-    <?php
-	    require_once("dbConnect.php");
-	    $db = get_db();
-    ?>
+$badLogin = false;
+
+if (isset($_POST['username']) && isset($_POST['pass']))
+{
+	// they have submitted a username and password for us to check
+	$username = $_POST['username'];
+	$password = $_POST['pass'];
+
+	// Connect to the DB
+	require("dbConnect.php");
+	//$db = get_db();
+
+	$query = 'SELECT pass FROM login WHERE username=:username';
+
+	$statement = $db->prepare($query);
+	$statement->bindValue(':username', $username);
+
+    $result = $statement->execute();
+    error_log("getting result-------");
+    error_log($result);
+if ($result){
+    $row = $statement->fetch();
+    $hashedPasswordFromDB = $row['pass'];
+
+    // now check to see if the hashed password matches
+    if (password_verify($password, $hashedPasswordFromDB))
+    {
+        // password was correct, put the user on the session, and redirect to home
+        $_SESSION['username'] = $username;
+        header("Location: home.php");
+        die(); // we always include a die after redirects.
+    }
+    else
+    {
+        $badLogin = true;
+        error_log("bad Password");
+    }
+
+}
+else
+{
+    $badLogin = true;
+    error_log("bad Result");
+}
+}
+?>
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>Signin</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sign-in/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.6">
+  <title>Signin</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sign-in/">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-       <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    html,
+    body {
+      height: 100%;
+    }
 
-      html,
-body {
-  height: 100%;
-}
+    body {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #f5f5f5;
+    }
 
-body {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-}
+    .form-signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: auto;
+    }
 
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-}
-.form-signin .checkbox {
-  font-weight: 400;
-}
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-    </style>
-      </head>
-    <body class="text-center">
-    <form action="register.php" method="POST"class="form-signin">
+    .form-signin .checkbox {
+      font-weight: 400;
+    }
+
+    .form-signin .form-control {
+      position: relative;
+      box-sizing: border-box;
+      height: auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .form-signin .form-control:focus {
+      z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  </style>
+</head>
+
+<body class="text-center">
+  <form action="register.php" method="POST" class="form-signin">
     <img class="mb-4" src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg" alt="" width="85" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Dont Be Awk-Word and sign in</h1>
-  <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="text" id="username" class="form-control" placeholder="username" name="username" required="" autofocus="">
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="password" class="form-control" placeholder="Password" name="password" required="">
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted">© 2020</p>
-    </form>
+    <h1 class="h3 mb-3 font-weight-normal">Dont Be Awk-Word and sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="text" id="username" class="form-control" placeholder="username" name="username" required="" autofocus="">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="password" class="form-control" placeholder="Password" name="password" required="">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">© 2020</p>
+  </form>
+    <a href="register.php"><button class="btn btn-lg btn-primary btn-block" type="submit">Register</button></a>
+  <script src="" async defer></script>
+</body>
 
-        <script src="" async defer></script>
-    </body>
 </html>
-
-
-
-
