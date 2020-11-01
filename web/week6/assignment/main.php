@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['pass']))
   require("connection.php");
   //$db = get_db();
 
-  $query = 'SELECT pass FROM person WHERE username=:username';
+  $query = 'SELECT password FROM person WHERE username=:username';
 
   $statement = $connect->prepare($query);
   $statement->bindValue(':username', $username);
