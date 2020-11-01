@@ -29,8 +29,18 @@ if ($result){
     // now check to see if the hashed password matches
     if (password_verify($password, $hashedPasswordFromDB))
     {
+      $query = 'SELECT id FROM person WHERE username=:username';
+      $statement2 = $connect->prepare($query);
+      $statement2->bindValue(':username', $username);
+      $result2 = $statement2->execute();
+
+
+
+
         // password was correct, put the user on the session, and redirect to home
         $_SESSION['username'] = $username;
+        $_SESSION['personId'] = $result2;
+        error_log("getting result2 ------------------------- " + $result);
         header("Location: home.php");
         die(); // we always include a die after redirects.
     }
