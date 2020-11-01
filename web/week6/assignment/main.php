@@ -29,8 +29,8 @@ if ($result){
     // now check to see if the hashed password matches
     if (password_verify($password, $hashedPasswordFromDB))
     {
-      $query = 'SELECT id FROM person WHERE username=:username';
-      $statement2 = $connect->prepare($query);
+      $query2 = 'SELECT id FROM person WHERE username=:username';
+      $statement2 = $connect->prepare($query2);
       $statement2->bindValue(':username', $username);
       $result2 = $statement2->execute();
 
