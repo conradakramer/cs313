@@ -31,7 +31,7 @@ if ($result){
     {
         // password was correct, put the user on the session, and redirect to home
         $_SESSION['username'] = $username;
-        header("Location: main.php");
+        header("Location: home.php");
         die(); // we always include a die after redirects.
     }
     else
