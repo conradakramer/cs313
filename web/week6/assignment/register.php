@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require("dbConnect.php");
-$db = get_db();
+require("connection.php");
+//$db = get_db();
 
 
 $user = $_POST["username"];
@@ -14,13 +14,13 @@ $_SESSION["username"] = $user;
 try
 {
 	$query = 'INSERT INTO person (username, password) VALUES (:user, :pass)';
-	$statement = $db->prepare($query);
+	$statement = $connect->prepare($query);
 	$statement->bindValue(':user',$user);
 	$statement->bindValue(':pass',$pass);
 	$statement->execute();
 
 
-	$userId = $db->lastInsertId("person_id_seq");
+	$userId = $connect->lastInsertId("person_id_seq");
 }
 catch (Exception $ex)
 {

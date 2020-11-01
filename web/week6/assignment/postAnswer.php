@@ -1,7 +1,7 @@
 <?php
 session_start();
-require("dbConnect.php");
-$db = get_db();
+require("connection.php");
+//$db = get_db();
 
 $userId = $_POST['userId'];
 $personId = $_POST['personId'];
@@ -23,7 +23,7 @@ CREATE TABLE answer(
 try
 {
 	$query = 'INSERT INTO answer (user_id, question_id, answer) VALUES (:personId, :question_id, :answer)';
-	$statement = $db->prepare($query);
+	$statement = $connect->prepare($query);
 	$statement->bindValue(':personId',$personId);
     $statement->bindValue(':question_id',$question_id);
     $statement->bindValue(':answer',$answer);

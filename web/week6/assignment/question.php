@@ -4,8 +4,8 @@
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <?php
-	    require("dbConnect.php");
-	    $db = get_db();
+	    require("connection.php");
+	    //$db = get_db();
     ?>
     <body>
     <nav class="navbar navbar-dark bg-dark">
@@ -28,7 +28,7 @@
             
         //echo"questionid:$questionId  personid:$personId ";
 
-        $statement2 = $db->prepare("SELECT * FROM questions WHERE ID = $questionId");
+        $statement2 = $connect->prepare("SELECT * FROM questions WHERE ID = $questionId");
         $statement2->execute();
         while($row = $statement2->fetch(PDO::FETCH_ASSOC))
         {
@@ -38,7 +38,7 @@
             $date       = $row['added'];
 
 
-            $users = $db->prepare("SELECT username FROM person WHERE ID = $userId");
+            $users = $connect->prepare("SELECT username FROM person WHERE ID = $userId");
             $users->execute();
             while ($URow = $users->fetch(PDO::FETCH_ASSOC))
             {
@@ -56,7 +56,7 @@
                     </div>
                 </form>";
         }
-        $statement = $db->prepare("SELECT * FROM answer WHERE question_id = $questionId ");
+        $statement = $connect->prepare("SELECT * FROM answer WHERE question_id = $questionId ");
         //echo"<H1>Question: </H1>";
         
         $statement->execute();
@@ -68,7 +68,7 @@
             $answer     = $row['answer'];
 
 
-            $users = $db->prepare("SELECT username FROM person WHERE ID = $userId");
+            $users = $connect->prepare("SELECT username FROM person WHERE ID = $userId");
             $users->execute();
             while ($URow = $users->fetch(PDO::FETCH_ASSOC))
             {
