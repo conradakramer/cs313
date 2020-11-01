@@ -4,6 +4,7 @@ session_start();
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
     error_log($_SESSION['username']);
+    error_log($_SESSION['personId']);
 }
 if ($_SESSION['username'] == '') {
     header('Location:main.php');
