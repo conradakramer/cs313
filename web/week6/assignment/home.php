@@ -6,6 +6,7 @@ if (isset($_SESSION['username'])) {
 }
 if ($_SESSION['username'] == '') {
     header('Location:main.php');
+    error_log($_SESSION['username']);
     die();
 }
 ?>
