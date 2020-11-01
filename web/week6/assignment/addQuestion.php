@@ -1,7 +1,7 @@
 <?php
 session_start();
-require("dbConnect.php");
-$db = get_db();
+require("connection.php");
+//$db = get_db();
 
 $personId = $_SESSION['personId'];
 $user = $_SESSION['username'];
