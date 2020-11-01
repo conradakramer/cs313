@@ -21,13 +21,13 @@ if ($pass != $pass2) {
 }
 $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 require("connection.php");
-$query = 'INSERT INTO "person" (username, pass) VALUES(:username, :pass)';
+$query = 'INSERT INTO "person" (username, password) VALUES(:username, :password)';
 $stmt = $connect->prepare($query);
 $stmt->bindValue(":username", $username);
-$stmt->bindValue(":pass", $hashedPass);
+$stmt->bindValue(":password", $hashedPass);
 $stmt->execute();
 
-header("Location: main.php");
+header("Location: home.php");
 die();
 
 function checkPassword($pass)
