@@ -59,7 +59,7 @@ require("connection.php");
         ?>
 
 
-        <form action="../addQuestion.php" method="POST">
+        <form action="addQuestion.php" method="POST">
             <div class="input-group">
 
                 <textarea class="form-control" aria-label="With textarea" name="question"></textarea>
@@ -95,7 +95,7 @@ require("connection.php");
 
 
 
-        echo "<form action=\"../question.php\" method=\"POST\">
+        echo "<form action=\"question.php\" method=\"POST\">
                     <div class=\"card bg-light mb-3\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">$username - $date  </h5>

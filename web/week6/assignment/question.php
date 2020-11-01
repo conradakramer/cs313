@@ -1,6 +1,16 @@
-    <?php
-        session_start();
-    ?>
+<?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+    error_log($_SESSION['username']);
+}
+if ($_SESSION['username'] == '') {
+    header('Location:main.php');
+    error_log($_SESSION['username']);
+    die();
+}
+?>
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <?php
