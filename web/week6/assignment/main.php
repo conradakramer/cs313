@@ -11,12 +11,12 @@ if (isset($_POST['username']) && isset($_POST['pass']))
   $password = $_POST['pass'];
 
   // Connect to the DB
-  require("dbConnect.php");
+  require("connection.php");
   //$db = get_db();
 
   $query = 'SELECT pass FROM person WHERE username=:username';
 
-  $statement = $db->prepare($query);
+  $statement = $connect->prepare($query);
   $statement->bindValue(':username', $username);
 
     $result = $statement->execute();
