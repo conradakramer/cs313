@@ -142,9 +142,12 @@ else
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="password" class="form-control" placeholder="Password" name="password" >
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br>
-    <p class="mt-5 mb-3 text-muted">© 2020</p>
+    
   </form>
+  <form action="main.php" method="POST" class="form-signin">
   <a href="signup.php"><button class="btn btn-lg btn-primary btn-block" type="register">Register</button></a>
+  <p class="mt-5 mb-3 text-muted">© 2020</p>
+  <form>
   <script src="" async defer></script>
 </body>
 
