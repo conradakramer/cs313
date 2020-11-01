@@ -141,8 +141,8 @@ else
     <input type="text" id="username" class="form-control" placeholder="username" name="username" required="" autofocus="">
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="password" class="form-control" placeholder="Password" name="password" required="">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <a href="register.php"><button class="btn btn-lg btn-primary btn-block" type="submit">Register</button></a>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br>
+    <a href="register.php"><button class="btn btn-lg btn-primary btn-block" type="register">Register</button></a>
     <p class="mt-5 mb-3 text-muted">© 2020</p>
   </form>
     
