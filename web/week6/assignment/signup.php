@@ -1,53 +1,4 @@
-<?php
 
-session_start();
-
-$badLogin = false;
-
-if (isset($_POST['username']) && isset($_POST['pass']))
-{
-	// they have submitted a username and password for us to check
-	$username = $_POST['username'];
-	$password = $_POST['pass'];
-
-	// Connect to the DB
-	require("dbConnect.php");
-	//$db = get_db();
-
-	$query = 'SELECT pass FROM person WHERE username=:username';
-
-	$statement = $db->prepare($query);
-	$statement->bindValue(':username', $username);
-
-    $result = $statement->execute();
-    error_log("getting result-------");
-    error_log($result);
-if ($result){
-    $row = $statement->fetch();
-    $hashedPasswordFromDB = $row['pass'];
-
-    // now check to see if the hashed password matches
-    if (password_verify($password, $hashedPasswordFromDB))
-    {
-        // password was correct, put the user on the session, and redirect to home
-        $_SESSION['username'] = $username;
-        header("Location: main.php");
-        die(); // we always include a die after redirects.
-    }
-    else
-    {
-        $badLogin = true;
-        error_log("bad Password");
-    }
-
-}
-else
-{
-    $badLogin = true;
-    error_log("bad Result");
-}
-}
-?>
 <!doctype html>
 <html lang="en">
 
@@ -134,15 +85,16 @@ else
 </head>
 
 <body class="text-center">
-  <form action="main.php" method="POST" class="form-signin">
+  <form action="createaccount.php" method="POST" class="form-signin">
     <img class="mb-4" src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg" alt="" width="85" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Dont Be Awk-Word and sign in</h1>
+    <h1 class="h3 mb-3 font-weight-normal">Dont Be Awk-Word and sign up now</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="text" id="username" class="form-control" placeholder="username" name="username" autofocus="">
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="password" class="form-control" placeholder="Password" name="password" >
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br>
-    <a href="signup.php"><button class="btn btn-lg btn-primary btn-block" type="register">Register</button></a>
+    <input type="password" id="password" class="form-control" placeholder="Password" name="pass" >
+    <label for="inputPassword" class="sr-only">Confirm Password</label>
+    <input type="password" id="password" class="form-control" placeholder="Password" name="pass2" >
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button><br>
     <p class="mt-5 mb-3 text-muted">© 2020</p>
   </form>
     
