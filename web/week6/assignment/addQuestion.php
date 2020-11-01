@@ -7,7 +7,7 @@ $personId = $_SESSION['personId'];
 $user = $_SESSION['username'];
 $question = $_POST['question'];
 $qdate = date('Y-m-d');
-echo "userid: $personId and user: $user";
+echo "userid: $personId and user: $user and post: $question";
 
 
 
@@ -27,7 +27,6 @@ try
 	$statement->bindValue(':personId',$personId);
     $statement->bindValue(':question',$question);
     $statement->bindValue(':qdate',$qdate);
-
     $statement->execute();
 
 }
@@ -37,6 +36,5 @@ catch (Exception $ex)
 	die();
 }
 header("Location: home.php");
-
 die(); 
 ?>
