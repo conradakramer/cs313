@@ -95,6 +95,7 @@
     <label for="inputPassword" class="sr-only">Confirm Password</label>
     <input type="password" id="password" class="form-control" placeholder="Confirm Password" name="pass2" >
     <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button><br>
+    <p class="message">Already registered? <a href="main.php">Sign In</a></p>
     <p class="mt-5 mb-3 text-muted">© 2020</p>
   </form>
     

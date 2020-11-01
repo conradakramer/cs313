@@ -6,18 +6,18 @@ $badLogin = false;
 
 if (isset($_POST['username']) && isset($_POST['pass']))
 {
-	// they have submitted a username and password for us to check
-	$username = $_POST['username'];
-	$password = $_POST['pass'];
+  // they have submitted a username and password for us to check
+  $username = $_POST['username'];
+  $password = $_POST['pass'];
 
-	// Connect to the DB
-	require("dbConnect.php");
-	//$db = get_db();
+  // Connect to the DB
+  require("dbConnect.php");
+  //$db = get_db();
 
-	$query = 'SELECT pass FROM person WHERE username=:username';
+  $query = 'SELECT pass FROM person WHERE username=:username';
 
-	$statement = $db->prepare($query);
-	$statement->bindValue(':username', $username);
+  $statement = $db->prepare($query);
+  $statement->bindValue(':username', $username);
 
     $result = $statement->execute();
     error_log("getting result-------");
@@ -48,6 +48,7 @@ else
 }
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -141,13 +142,9 @@ else
     <input type="text" id="username" class="form-control" placeholder="username" name="username" autofocus="">
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="password" class="form-control" placeholder="Password" name="password" >
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br>
-    
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="message">Not registered? <a href="signup.php">Create an account</a></p>
   </form>
-  <form action="main.php" method="POST" class="form-signin">
-  <a href="signup.php"><button class="btn btn-lg btn-primary btn-block" type="register">Register</button></a>
-  <p class="mt-5 mb-3 text-muted">© 2020</p>
-  <form>
   <script src="" async defer></script>
 </body>
 
