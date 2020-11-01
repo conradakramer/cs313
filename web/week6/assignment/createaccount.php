@@ -20,9 +20,9 @@ if ($pass != $pass2) {
 	die(); // we always include a die after redirects.
 }
 $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
-require("dbConnect.php");
+require("connection.php");
 $query = 'INSERT INTO "person" (username, pass) VALUES(:username, :pass)';
-$stmt = $db->prepare($query);
+$stmt = $connect->prepare($query);
 $stmt->bindValue(":username", $username);
 $stmt->bindValue(":pass", $hashedPass);
 $stmt->execute();
