@@ -20,14 +20,14 @@ if ($pass != $pass2) {
 	die(); // we always include a die after redirects.
 }
 $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
-require("connection.php");
-$query = 'INSERT INTO "login" (username, pass) VALUES(:username, :pass)';
-$stmt = $connect->prepare($query);
+require("dbConnect.php");
+$query = 'INSERT INTO "person" (username, pass) VALUES(:username, :pass)';
+$stmt = $db->prepare($query);
 $stmt->bindValue(":username", $username);
 $stmt->bindValue(":pass", $hashedPass);
 $stmt->execute();
 
-header("Location: signin.php");
+header("Location: main.php");
 die();
 
 function checkPassword($pass)
