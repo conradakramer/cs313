@@ -27,7 +27,10 @@ require("connection.php");
             <img src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-AW-Logo-Design-by-Greenlines-Studios-580x386.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
             Awk-Word
         </a>
-
+        <a class="navbar-brand" href="#">
+            Welcome  <?php $_SESSION['username']?>          
+        </a>
+        <a href="signout.php">Logout</a>
     </nav>
     <div class="container">
 
