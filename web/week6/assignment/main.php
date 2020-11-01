@@ -40,7 +40,8 @@ if ($result){
         // password was correct, put the user on the session, and redirect to home
         $_SESSION['username'] = $username;
         $_SESSION['personId'] = $result2;
-        error_log("getting result2 ------------------------- " + $result);
+        error_log("getting result2 ------------------------- ");
+        error_log($result2);
         header("Location: home.php");
         die(); // we always include a die after redirects.
     }
