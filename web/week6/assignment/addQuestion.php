@@ -23,7 +23,7 @@ added DATE NOT NULL*/
 try
 {
 	$query = 'INSERT INTO questions (user_id, question, added) VALUES (:personId, :question, :qdate)';
-	$statement = $db->prepare($query);
+	$statement = $connect->prepare($query);
 	$statement->bindValue(':personId',$personId);
     $statement->bindValue(':question',$question);
     $statement->bindValue(':qdate',$qdate);
